@@ -45,7 +45,6 @@ const NavBar = () => {
 	];
 	return (
 		<div className="md:flex md:p-5 md:px-24 md:justify-between items-center shadow  bg-custom-color">
-			{/* <div className="flex justify-between"> */}
 			<div className="flex justify-between md:justify-normal items-center p-4">
 				<div>
 					<Link
@@ -107,15 +106,18 @@ const NavBar = () => {
 					</div>
 				</div>
 			</div>
-			{/* </div> */}
 			{/* mobile screen navbar  */}
-			<div className="flex items-center justify-center text-center h-screen absolute bg-custom-color">
-				<div className={` ${!open ? "hidden" : ""}`}>
+			<div
+				className={` ${
+					!open ? "hidden" : "absolute top-[4.5rem] md:static w-full text-xl"
+				}`}
+			>
+				<div className="flex h-[40rem] w-full bg-custom-color">
 					<div
 						onClick={() => {
 							setOpen(!open);
 						}}
-						className="w-full my-5 py-24 transition-all duration-500 text-white"
+						className="w-full my-5 py-24 space-y-5 transition-all duration-500 text-white"
 					>
 						{navLinks.map(({ link, name }) => (
 							<Link
@@ -124,7 +126,7 @@ const NavBar = () => {
 								className="justify-center items-center flex"
 							>
 								<div
-									className={`hover:bg-gray-50 px-6 py-3 rounded-sm w-full ${
+									className={`hover:bg-pink-600 px-6 py-3 rounded-sm w-full transition-all duration-500 ${
 										pathname.startsWith(link) ? "" : ""
 									}`}
 								>
