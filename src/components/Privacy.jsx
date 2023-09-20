@@ -20,8 +20,8 @@ const Privacy = () => {
 							It's our aim to always take of our participant.
 						</div>
 					</div>
-					<div className="border-2 border-purple-500 rounded-lg mb-5 justify-center">
-						<div className="m-5">
+					<div className="border-2 border-purple-500 rounded-lg mb-4 pb-20 justify-center">
+						<div className="m-5 text-center">
 							At getlinked tech Hackathon 1.0, we value your privacy and are
 							committed to protecting your personal information. This Privacy
 							Policy outlines how we collect, use, discose, and safeguard your
@@ -82,7 +82,7 @@ const Privacy = () => {
 								</div>
 							</div>
 						</div>
-						<div className="mt-10">
+						<div className="flex mt-10 justify-center">
 							<Button text={"Read More"} />
 						</div>
 					</div>
