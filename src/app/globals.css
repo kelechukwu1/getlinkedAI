@@ -5,32 +5,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700&display=swap");
 
 :root {
-	/* --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255; */
-	font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-	background-color: rgba(21, 14, 40, 1);
-	font-family: "Montserrat", sans-serif;
+  background-color: rgba(21, 14, 40, 1);
+  font-family: "Montserrat", sans-serif;
 }
+
 @layer utilities {
-	.bg-custom-color {
-		background-color: rgba(21, 14, 40, 1);
-	}
-	.primary-color {
-		background: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
-	}
-	.text-color-1 {
-		color: rgba(144, 58, 255, 1);
-	}
-	.text-color-2 {
-		color: rgba(212, 52, 254, 1);
-	}
-	.bg-custom-color2 {
-		background-color: rgb(16, 9, 34);
-	}
+  .bg-custom-color {
+    background-color: rgba(21, 14, 40, 1);
+  }
+  .primary-color {
+    background: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+  }
+  .text-color-1 {
+    color: rgba(144, 58, 255, 1);
+  }
+  .text-color-2 {
+    color: rgba(212, 52, 254, 1);
+  }
+  .bg-custom-color2 {
+    background-color: rgb(16, 9, 34);
+  }
 }
 
 /* .mobileNav {
