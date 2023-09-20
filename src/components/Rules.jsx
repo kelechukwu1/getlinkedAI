@@ -3,7 +3,7 @@ import Image from "next/image";
 const Rules = () => {
 	return (
 		<>
-			<div className="md:flex mx-10 mt-10 text-white">
+			<div className="md:flex mx-10 my-10 text-white">
 				<div className="absolute">
 					<Image
 						src="/purpleLens.png"
@@ -13,7 +13,7 @@ const Rules = () => {
 						className="relative top-[-3.5rem] left-[-6rem] opacity-40"
 					/>
 				</div>
-				<div className="absolute">
+				{/* <div className="absolute">
 					<Image
 						src="/purpleLens.png"
 						width={500}
@@ -21,7 +21,7 @@ const Rules = () => {
 						alt="reward cup"
 						className="relative top-[13rem] left-[12rem] opacity-30"
 					/>
-				</div>
+				</div> */}
 				<div className="flex justify-center">
 					<Image
 						src={"/rulesImg.png"}

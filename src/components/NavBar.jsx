@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { RiMenu4Line } from "react-icons/ri";
 import { RiCloseLine } from "react-icons/ri";
+import Button from "./Button";
 
 const NavBar = () => {
 	const pathname = usePathname();
@@ -98,13 +99,8 @@ const NavBar = () => {
 							</Link>
 						))}
 					</div>
-					<div className="px-6 pt-5">
-						<Link
-							href="/register"
-							className="text-white bg-gradient-to-r from-pink-500 via-purple-500 py-3 px-10 text-center rounded-sm hover:bg-pink-500 hover:cursor-pointer transition-all duration-500 "
-						>
-							Register
-						</Link>
+					<div className="ml-20">
+						<Button />
 					</div>
 				</div>
 			</div>

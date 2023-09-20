@@ -3,7 +3,7 @@ import Image from "next/image";
 const Faq = () => {
 	return (
 		<div>
-			<div className="mx-10 text-sm">
+			<div className="mx-10 text-sm my-10">
 				<div className="md:flex w-full">
 					<div className="w-full">
 						<div className="text-center">

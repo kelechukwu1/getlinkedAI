@@ -3,7 +3,7 @@ import Image from "next/image";
 const Introduction = () => {
 	return (
 		<div>
-			<div className="md:flex mx-10 mt-10">
+			<div className="md:flex mx-10 my-10">
 				<div className="flex justify-center">
 					<Image src={"/idea.png"} width={300} height={300} alt="big idea" />
 				</div>

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 const Privacy = () => {
 	return (
 		<>
-			<div className="mx-10 my-20 md:flex text-white">
+			<div className="mx-10 my-28 md:flex text-white">
 				<div>
 					<div className="text-center">
 						<div my-5>
@@ -28,25 +29,61 @@ const Privacy = () => {
 							participating in our event, you consent to the practices described
 							in this policy.
 						</div>
-						<div className="m-5 space-y-5">
-							<div className="text-color-2">Licensing Policy</div>
-							<div>
-								{" "}
-								The Standard License grants you a non-exclusive right to
-								navigate and register for our event.
+						<div className="m-5">
+							<div className="text-color-2 mt-4 font-semibold">
+								Licensing Policy
 							</div>
-							<div>
-								You are licensed to use the item available at any free sites,
-								for your project development.
+							<div className="mt-1 mb-4">
+								Here are terms of our Standard License:
+							</div>
+							<div className="flex">
+								<div className="mr-2 mt-2">
+									<svg
+										width="17"
+										height="17"
+										viewBox="0 0 17 17"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle cx="8.5" cy="8.5" r="8.5" fill="#2DE100" />
+										<path
+											d="M5 8L7 10.5L13.5 6"
+											stroke="white"
+											stroke-width="2"
+										/>
+									</svg>
+								</div>
+								<div>
+									{" "}
+									The Standard License grants you a non-exclusive right to
+									navigate and register for our event.
+								</div>
+							</div>
+							<div className="flex">
+								<div className="mr-2 mt-2">
+									<svg
+										width="17"
+										height="17"
+										viewBox="0 0 17 17"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle cx="8.5" cy="8.5" r="8.5" fill="#2DE100" />
+										<path
+											d="M5 8L7 10.5L13.5 6"
+											stroke="white"
+											stroke-width="2"
+										/>
+									</svg>
+								</div>
+								<div>
+									You are licensed to use the item available at any free sites,
+									for your project development.
+								</div>
 							</div>
 						</div>
-						<div className="px-6 pt-2 mb-20 text-center mt-10">
-							<Link
-								href="/register"
-								className="text-white text-xl bg-gradient-to-r from-pink-500 via-purple-500 py-4 px-12 text-center rounded-md hover:bg-pink-500 transition-all duration-500 "
-							>
-								Read More
-							</Link>
+						<div className="mt-10">
+							<Button text={"Read More"} />
 						</div>
 					</div>
 				</div>
