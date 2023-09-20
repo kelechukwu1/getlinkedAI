@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { RiMenu4Line } from "react-icons/ri";
 import { RiCloseLine } from "react-icons/ri";
+import Button from "./Button";
 
 const NavBar = () => {
 	const pathname = usePathname();
@@ -98,13 +99,8 @@ const NavBar = () => {
 							</Link>
 						))}
 					</div>
-					<div className="px-6 pt-5">
-						<Link
-							href="/register"
-							className="text-white bg-gradient-to-r from-pink-500 via-purple-500 py-3 px-10 text-center rounded-sm hover:bg-pink-500 hover:cursor-pointer transition-all duration-500 "
-						>
-							Register
-						</Link>
+					<div className="ml-20">
+						<Button text={"register"} />
 					</div>
 				</div>
 			</div>
@@ -117,21 +113,47 @@ const NavBar = () => {
 				<div className="flex w-full bg-custom-color h-screen">
 					<div className="absolute top-5 right-1 p-4">
 						<button onClick={() => setOpen(!open)}>
-							<div className="relative w-12 h-12">
-								<div className="absolute w-12 h-12 rounded-full border-4 border-purple-500 border-solid top-[-0.8rem] left-[-0.8rem]"></div>
+							<div className="relative w-12 h-12 top-[1rem] right-[1rem]">
+								<div className="absolute w-12 h-12 top-[-0.6rem] left-[-0.7rem]">
+									<svg
+										width="40"
+										height="40"
+										viewBox="0 0 23 23"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle
+											cx="11.5"
+											cy="11.5"
+											r="11"
+											stroke="url(#paint0_linear_181_74)"
+										/>
+										<defs>
+											<linearGradient
+												id="paint0_linear_181_74"
+												x1="11.5"
+												y1="0"
+												x2="11.5"
+												y2="23"
+												gradientUnits="userSpaceOnUse"
+											>
+												<stop stop-color="#903AFF" />
+												<stop offset="1" stop-color="#FF26B9" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
 								{/* Close icon */}
 								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									className="h-6 w-6 text-white"
+									width="20"
+									height="20"
+									viewBox="0 0 11 11"
 									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
+									xmlns="http://www.w3.org/2000/svg"
 								>
 									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth="2"
-										d="M6 18L18 6M6 6l12 12"
+										d="M0.307505 10.6925C0.504459 10.8894 0.771552 11 1.05005 11C1.32854 11 1.59563 10.8894 1.79259 10.6925L5.50634 6.97874L9.22009 10.6925C9.41818 10.8838 9.68348 10.9897 9.95886 10.9873C10.2342 10.9849 10.4977 10.8744 10.6924 10.6797C10.8871 10.485 10.9976 10.2216 11 9.94617C11.0024 9.6708 10.8965 9.4055 10.7052 9.20741L6.99142 5.49366L10.7052 1.77991C10.8965 1.58182 11.0024 1.31652 11 1.04114C10.9976 0.765767 10.8871 0.502346 10.6924 0.307617C10.4977 0.112889 10.2342 0.00243378 9.95886 4.1008e-05C9.68348 -0.00235271 9.41818 0.103509 9.22009 0.294824L5.50634 4.00858L1.79259 0.294824C1.5945 0.103509 1.3292 -0.00235271 1.05383 4.1008e-05C0.778448 0.00243378 0.515027 0.112889 0.320299 0.307617C0.12557 0.502346 0.0151142 0.765767 0.0127213 1.04114C0.0103283 1.31652 0.11619 1.58182 0.307505 1.77991L4.02126 5.49366L0.307505 9.20741C0.110609 9.40437 0 9.67146 0 9.94995C0 10.2284 0.110609 10.4955 0.307505 10.6925Z"
+										fill="#F8F8F8"
 									/>
 								</svg>
 							</div>
@@ -158,13 +180,8 @@ const NavBar = () => {
 								</div>
 							</Link>
 						))}
-						<div className="px-6 pt-5">
-							<Link
-								href="/register"
-								className="text-white bg-gradient-to-r from-pink-500 via-purple-500 py-3 px-10 text-center rounded-sm hover:bg-pink-500 transition-all duration-500 "
-							>
-								Register
-							</Link>
+						<div className="mx-5 py-9">
+							<Button text={"register"} />
 						</div>
 					</div>
 				</div>

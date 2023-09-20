@@ -1,16 +1,16 @@
 import Image from "next/image";
-import Link from "next/link";
+import Button from "./Button";
 const Judging = () => {
 	return (
 		<>
-			<div className="md:flex mx-10 mt-10 text-white">
+			<div className="md:flex mx-10 my-20 text-white">
 				<div className="absolute">
 					<Image
 						src="/purpleLens.png"
 						width={500}
 						height={500}
 						alt="reward cup"
-						className="relative top-[6rem] left-[-5rem] opacity-50"
+						className="relative blur top-[6rem] left-[-5rem] opacity-50"
 					/>
 				</div>
 				<div className="flex justify-center">
@@ -63,7 +63,7 @@ const Judging = () => {
 						competition-specific requirements.
 					</div>
 
-					<div className="absolute">
+					{/* <div className="absolute">
 						<Image
 							src="/purpleLens.png"
 							width={500}
@@ -71,14 +71,9 @@ const Judging = () => {
 							alt="reward cup"
 							className="relative top-[-15rem] left-[7rem] opacity-40"
 						/>
-					</div>
-					<div className="px-6 pt-2 mb-20 text-center mt-10">
-						<Link
-							href="/register"
-							className="text-white text-xl bg-gradient-to-r from-pink-500 via-purple-500 py-4 px-12 text-center rounded-md hover:bg-pink-500 transition-all duration-500 "
-						>
-							Read More
-						</Link>
+					</div> */}
+					<div className="mt-10">
+						<Button text={"Read More"} />
 					</div>
 				</div>
 			</div>

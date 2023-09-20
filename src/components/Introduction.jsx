@@ -3,18 +3,18 @@ import Image from "next/image";
 const Introduction = () => {
 	return (
 		<div>
-			<div className="md:flex mx-10 mt-10">
-				<div className="flex justify-center">
+			<div className="md:flex mx-10 md:mx-0 my-10 md:w-full md:my-32">
+				<div className="flex justify-center md:w-full">
 					<Image src={"/idea.png"} width={300} height={300} alt="big idea" />
 				</div>
-				<div className="text-center my-5">
+				<div className="text-center my-5 md:w-full md:text-start">
 					<div className="text-2xl font-bold mt-5">
 						Introduction to getlinked
 					</div>
 					<div className="text-color-2 text-2xl font-bold mb-5">
 						tech Hackathon1.0
 					</div>
-					<div>
+					<div className="md:pr-32">
 						Our tech hackathon is a melting pot of visionaries, and its purpose
 						is as clear as day: to shape the future. Whether you're a coding
 						genius, a design maverick, or a concept wizard, you'll have the

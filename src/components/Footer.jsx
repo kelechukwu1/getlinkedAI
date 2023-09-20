@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { FiPhoneCall } from "react-icons/fi";
+import { IoLocationSharp } from "react-icons/io5";
+import Socials from "./Socials";
 
 const Footer = () => {
 	return (
@@ -35,18 +38,29 @@ const Footer = () => {
 							<Link href={"register"}>Register</Link>
 						</div>
 						<div className="flex">
-							<div>Follow us</div>
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
+							<div className="mr-5 text-color-2">Follow us</div>
+							<Socials />
 						</div>
 					</div>
 
 					<div className="space-y-5 mt-5">
 						<div className="text-color-2 font-bold text-xl">Contact Us</div>
-						<div>+234 679 81819</div>
-						<div className="">27, Alara Street Yaba 100012 Lagos State</div>
+						<div className="flex items-center">
+							<div className="pr-2">
+								<FiPhoneCall className="w-4 h-4" />
+							</div>
+							<div>+234 679 81819</div>
+						</div>
+						<div className="flex">
+							<div className="pr-2 mt-1">
+								<IoLocationSharp className="w-4 h-4" />
+							</div>
+							<div>
+								<p>27, Alara Street</p>
+								<p>Yaba 100012</p>
+								<p>Lagos State</p>
+							</div>{" "}
+						</div>
 					</div>
 
 					<div className="text-center my-5">
