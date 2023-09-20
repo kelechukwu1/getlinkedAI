@@ -10,7 +10,7 @@ const Judging = () => {
 						width={500}
 						height={500}
 						alt="reward cup"
-						className="relative top-[6rem] left-[-5rem] opacity-50"
+						className="relative blur top-[6rem] left-[-5rem] opacity-50"
 					/>
 				</div>
 				<div className="flex justify-center">

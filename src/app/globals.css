@@ -31,6 +31,9 @@ body {
 	.bg-custom-color2 {
 		background-color: rgb(16, 9, 34);
 	}
+	.blur {
+		filter: blur(8px); /* Adjust the blur intensity as needed */
+	}
 }
 
 /* .mobileNav {
