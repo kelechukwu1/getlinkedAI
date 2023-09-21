@@ -56,7 +56,7 @@ const NavBar = () => {
 							open ? setOpen(!open) : !open;
 						}}
 					>
-						<div>
+						<div className="relative z-10">
 							<span className="text-white font-bold text-3xl">get</span>
 							<span className="text-color-2 font-bold text-3xl">linked</span>
 						</div>

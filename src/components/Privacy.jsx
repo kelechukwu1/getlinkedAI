@@ -1,13 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import Button from "./Button";
 
 const Privacy = () => {
 	return (
 		<>
 			<div className="mx-10 my-28 md:flex text-white">
-				<div>
-					<div className="text-center">
+				<div className="lg:text-start lg:w-full md:mx-32">
+					<div className="text-center lg:text-start">
 						<div my-5>
 							<div className="text-2xl font-bold">Privacy Policy and</div>
 							<span className="text-color-2 text-2xl font-bold">Terms</span>
@@ -15,13 +14,13 @@ const Privacy = () => {
 						<div className="text-gray-300 mt-2">
 							Last updated on september 12, 2023
 						</div>
-						<div className="mb-5 mt-10">
+						<div className="mb-5 mt-7">
 							Below are our privacy & policy, which outline a lot of goodies.
 							It's our aim to always take of our participant.
 						</div>
 					</div>
-					<div className="border-2 border-purple-500 rounded-lg mb-4 pb-20 justify-center">
-						<div className="m-5 text-center">
+					<div className="border-2 border-purple-500 rounded-lg pb-10 lg:pt-5 lg:px-5 justify-center">
+						<div className="m-5 text-center lg:text-start">
 							At getlinked tech Hackathon 1.0, we value your privacy and are
 							committed to protecting your personal information. This Privacy
 							Policy outlines how we collect, use, discose, and safeguard your
@@ -81,19 +80,20 @@ const Privacy = () => {
 									for your project development.
 								</div>
 							</div>
-						</div>
-						<div className="flex mt-10 justify-center">
-							<Button text={"Read More"} />
+							<div className="flex mt-10 justify-center">
+								<Button text={"Read More"} />
+							</div>
 						</div>
 					</div>
 				</div>
-				<div className="flex justify-center mt-10 relative">
+				<div className="flex justify-center mt-10 md:pt-16 pb-10 md:pb-0 lg:mt-5 relative lg:w-full">
 					<div className="relative z-10">
 						<Image
 							src="/privacy.png"
 							width={300}
 							height={300}
-							alt="privacy padlock"
+							alt="privacy shield"
+							className="lg:h-[25rem]"
 						/>
 					</div>
 					<div className="absolute top-0 left-0 flex justify-center w-full h-full">
@@ -101,8 +101,8 @@ const Privacy = () => {
 							src="/privacy1.png"
 							width={300}
 							height={300}
-							alt="privacy padlock"
-							className="absolute top-28 left-0"
+							alt="privacy padlock guard"
+							className="absolute md:h-[30rem] md:w-[20rem] top-28 left-0 lg:left-16 lg:top-44"
 						/>
 					</div>
 				</div>
