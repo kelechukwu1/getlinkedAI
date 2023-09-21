@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
-import star from "./../../public/star.png";
-// import stargray from "../../../public/stargray.png";
-// import sataGra from "../../../public/sata gra.png";
+
 const Landing = () => {
 	return (
 		<>
@@ -31,9 +29,6 @@ const Landing = () => {
 						alt="purple lens"
 						className="blur opacity-50 z-0"
 					/>
-				</div>
-				<div>
-					<star />
 				</div>
 			</div>
 
