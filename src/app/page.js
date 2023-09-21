@@ -13,19 +13,19 @@ export default function Home() {
 		<main className="text-white">
 			{/* Landing page */}
 			<Landing />
-
+			<hr className="border-t-1 border-gray-500" />
 			{/* introduction to getlinked tech hackathon section*/}
 			<Introduction />
-			<hr />
+			<hr className="border-t-1 border-gray-500" />
 			{/* rules and guidlines section*/}
 			<Rules />
-			<hr />
+			<hr className="border-t-1 border-gray-500" />
 			{/* judging Criteria key atributes section*/}
 			<Judging />
-			<hr />
+			<hr className="border-t-1 border-gray-500" />
 			{/* Faq section*/}
 			<Faq />
-			<hr />
+			<hr className="border-t-1 border-gray-500" />
 			{/* timeline section*/}
 			<Timeline />
 
@@ -34,7 +34,7 @@ export default function Home() {
 
 			{/* partners and sponsors section */}
 			<Sponsor />
-			<hr />
+			<hr className="border-t-1 border-gray-500" />
 
 			{/* privacy and policy section */}
 			<Privacy />

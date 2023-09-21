@@ -3,20 +3,20 @@ import Button from "./Button";
 const Judging = () => {
 	return (
 		<>
-			<div className="md:flex mx-10 my-20 text-white">
+			<div className="md:flex mx-10 my-20 text-white  md:mx-0 md:justify-center md:items-center md:w-full md:my-24">
 				<div className="absolute">
 					<Image
 						src="/purpleLens.png"
 						width={500}
 						height={500}
-						alt="reward cup"
+						alt="purple frame"
 						className="relative blur top-[6rem] left-[-5rem] opacity-50"
 					/>
 				</div>
-				<div className="flex justify-center">
-					<Image src={"/judges.png"} width={300} height={300} alt="judges" />
+				<div className="flex justify-center md:w-full">
+					<Image src={"/judges.png"} width={500} height={500} alt="judges" />
 				</div>
-				<div className="text-center my-5">
+				<div className="text-center my-5 justify-center items-center md:w-full md:text-start md:pr-32">
 					<div className="text-2xl font-bold">
 						Judging Criteria{" "}
 						<span className="text-color-2">Key attributes</span>
@@ -72,7 +72,7 @@ const Judging = () => {
 							className="relative top-[-15rem] left-[7rem] opacity-40"
 						/>
 					</div> */}
-					<div className="mt-10">
+					<div className="mt-10 relative z-10">
 						<Button text={"Read More"} />
 					</div>
 				</div>
