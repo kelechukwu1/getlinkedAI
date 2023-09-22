@@ -16,6 +16,7 @@ import Button from "@/components/Button";
 
 const Page = () => {
   const [openModal, setOpenModal] = useState(false);
+  const formCardRef = useRef();
   const imageRef = useRef();
 
   const submitHandler = (e) => {
@@ -24,7 +25,28 @@ const Page = () => {
     setOpenModal(true);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const image = imageRef.current;
+    const form = formCardRef.current;
+
+    const mm = gsap.matchMedia();
+
+    gsap
+      .timeline()
+      .from(image, {
+        xPercent: -100,
+        autoAlpha: 0,
+      })
+      .from(form, {
+        yPercent: -100,
+        autoAlpha: 0,
+      })
+      .from("#img", {
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+      });
+  }, []);
 
   return (
     <>
@@ -35,7 +57,7 @@ const Page = () => {
         <section className="md:flex items-center ">
           <div className="md:flex-0 lg:flex-1 mt-12 flex justify-center">
             <div
-              className="relative w-52 h-52 md:w-80 md:h-80 lg:w-96 lg:h-96 "
+              className="relative w-52 h-52 md:w-80 md:h-80 lg:w-96 lg:h-96 invisible"
               ref={imageRef}
             >
               <Image
@@ -44,40 +66,51 @@ const Page = () => {
                 fill={true}
                 className="object-cover"
               />
+
               <Image
                 src={starpu}
                 alt=""
                 width={12}
-                className="absolute bottom-20 -right-10 md:bottom-0 md:right-0 md:top-3 md:left-12"
+                className=" absolute bottom-20 -right-10 md:bottom-0 md:right-0 md:top-3 md:left-12"
+                id="img"
               />
+
               <Image
                 src={stargray}
                 alt=""
                 width={12}
-                className="absolute hidden md:block md:bottom-0 md:left-[4.3rem]"
+                className=" absolute hidden md:block md:bottom-0 md:left-[4.3rem]"
+                id="img"
               />
+
               <Image
                 src={starpu}
                 alt=""
                 width={12}
                 className="absolute hidden md:block md:bottom-20 md:right-10"
+                id="img"
               />
             </div>
           </div>
 
-          <div className="md:flex-1 mt-8 text-white">
+          <div
+            className="md:flex-1 mt-8 text-white invisible"
+            ref={formCardRef}
+          >
             <div className="md:border md:p-14 lg:p-10 md:rounded-md md:border-[#FFFFFF08] md:shadow-2xl md:bg-[#FFFFFF08] relative">
               <Image
                 src={stargray}
                 alt=""
                 width={17}
                 className="absolute hidden md:block top-4 right-28"
+                id="img"
               />
               <Image
                 src={star}
                 alt=""
                 width={10}
                 className="absolute hidden md:block -bottom-4 right-16"
+                id="img"
               />
               <h2 className="hidded md:block font-bold text-2xl text-color-2 mb-9">
                 Register
@@ -111,6 +144,7 @@ const Page = () => {
                   alt=""
                   width={15}
                   className="absolute top-5 -left-7 md:hidden"
+                  id="img"
                 />
 
                 <Image
@@ -118,6 +152,7 @@ const Page = () => {
                   alt=""
                   width={10}
                   className="absolute bottom-[15.5rem] -right-5 md:hidden"
+                  id="img"
                 />
                 <div className="flex flex-col gap-5 md:gap-3 md:grid grid-cols-2 grid-rows-2">
                   <div className="space-y-2 col-span-1">

@@ -1,23 +1,51 @@
-import React from "react";
-import Socials from "@/components/Socials";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import gsap from "gsap";
 
+import Socials from "@/components/Socials";
 import BackHome from "@/components/BackHome";
+import Button from "@/components/Button";
+
 import star from "../../../public/star.png";
 import stargray from "../../../public/stargray.png";
 import sataGra from "../../../public/sata gra.png";
-import Image from "next/image";
-import Button from "@/components/Button";
 
-const page = () => {
+const Page = () => {
+  const infoRef = useRef();
+  const formRef = useRef();
+
+  useEffect(() => {
+    const info = infoRef.current;
+    const form = formRef.current;
+
+    gsap
+      .timeline()
+      .from(info, {
+        xPercent: -100,
+        autoAlpha: 0,
+      })
+      .from(form, {
+        yPercent: -100,
+        autoAlpha: 0,
+      })
+      .from("#img", {
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+      });
+  }, []);
+
   return (
     <main className=" w-[80%] mx-auto md:mt-10">
       <section className="md:flex items-center gap-10">
-        <div className="relative md:flex-1">
+        <div className="relative md:flex-1 invisible" ref={infoRef}>
           <Image
             src={sataGra}
             alt=""
             width={15}
             className="absolute -top-[5.5rem] left-4"
+            id="img"
           />
           <div className="hidden md:block md:flex-1">
             <h2 className="text-[32px] font-semibold text-color-2">
@@ -41,7 +69,10 @@ const page = () => {
           </div>
         </div>
 
-        <div className="w-[95%] md:w-full md:flex-1 mx-auto mt-10 md:border md:p-14 lg:p-10 md:rounded-md md:border-[#FFFFFF08] md:shadow-2xl md:bg-[#FFFFFF08]">
+        <div
+          className="w-[95%] md:w-full md:flex-1 mx-auto mt-10 md:border md:p-14 lg:p-10 md:rounded-md md:border-[#FFFFFF08] md:shadow-2xl md:bg-[#FFFFFF08] invisible"
+          ref={formRef}
+        >
           <BackHome />
           <div className="text-color-2 text-2xl md:text-lg font-semibold relative">
             <h2>Questions or need assistance?</h2>
@@ -51,12 +82,14 @@ const page = () => {
               alt=""
               width={15}
               className="absolute top-9 right-4 md:-top-28 md:-right-9 "
+              id="img"
             />
             <Image
               src={sataGra}
               alt=""
               width={15}
               className="absolute -top-10 right-[9.5rem] md:hidden"
+              id="img"
             />
           </div>
           <p className="text-white my-7 md:hidden">
@@ -97,6 +130,7 @@ const page = () => {
               alt=""
               width={12}
               className="absolute bottom-5 -left-3 md:-left-16 lg:-left-[3.2rem] md:w-[18px]"
+              id="img"
             />
 
             <Image
@@ -104,6 +138,7 @@ const page = () => {
               alt=""
               width={12}
               className="absolute bottom-[5.5rem] -right-4 md:-bottom-10 md:-right-24 md:w-[15px]"
+              id="img"
             />
           </form>
 
@@ -119,4 +154,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
