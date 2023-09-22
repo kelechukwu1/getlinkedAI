@@ -3,17 +3,48 @@ import Button from "./Button";
 const Judging = () => {
 	return (
 		<>
-			<div className="md:flex mx-10 my-20 text-white  md:mx-0 md:justify-center md:items-center md:w-full md:my-24">
-				<div className="absolute">
+			<div className="md:flex mx-10 my-20 text-white  md:mx-0 md:justify-center md:items-center md:w-full md:my-24 relative">
+				{/* background beautifications */}
+				<div className="absolute blur top-[6rem] left-[-5rem] opacity-50 z-10">
 					<Image
 						src="/purpleLens.png"
 						width={500}
 						height={500}
 						alt="purple frame"
-						className="relative blur top-[6rem] left-[-5rem] opacity-50"
 					/>
 				</div>
-				<div className="flex justify-center md:w-full">
+
+				<div className="absolute">
+					<Image
+						src="/rightPurpleLens.png"
+						width={200}
+						height={50}
+						alt="purple frame"
+						className="relative blur top-[47rem] left-[11rem] opacity-50 z-10"
+					/>
+
+					<div className="md:hidden absolute top-[-3rem] left-[9rem]">
+						<Image
+							src={"/star pu.png"}
+							width={20}
+							height={20}
+							alt="star image"
+						/>
+					</div>
+					<div className=" md:hidden absolute top-[8rem] left-[11rem]">
+						<Image
+							src={"/stargray.png"}
+							width={15}
+							height={15}
+							alt="star image"
+						/>
+					</div>
+					<div className="md:hidden absolute top-[66rem] left-[11.5rem]">
+						<Image src={"/star.png"} width={20} height={20} alt="star image" />
+					</div>
+				</div>
+				{/* background beautification ends here */}
+				<div className="flex justify-center md:w-full z-0">
 					<Image src={"/judges.png"} width={500} height={500} alt="judges" />
 				</div>
 				<div className="text-center my-5 justify-center items-center md:w-full md:text-start md:pr-32">

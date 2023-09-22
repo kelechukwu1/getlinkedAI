@@ -3,7 +3,60 @@ import Button from "./Button";
 
 const Privacy = () => {
 	return (
-		<>
+		<div className="relative">
+			{/* background stars and frames */}
+			<div className=" md:hidden absolute top-[-2rem] left-[19rem]">
+				<Image src={"/stargray.png"} width={10} height={10} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[11rem] left-[21rem]">
+				<Image src={"/star pu.png"} width={20} height={20} alt="star" />
+			</div>
+
+			<div className=" md:hidden absolute top-[32rem] left-[-7rem]">
+				<Image
+					src={"/purpleLens.png"}
+					width={300}
+					height={300}
+					alt="purple lens"
+					className="blur"
+				/>
+			</div>
+			<div className=" md:hidden absolute top-[36rem] left-[1rem]">
+				<Image src={"/star pu.png"} width={20} height={20} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[58rem] left-[2rem]">
+				<Image src={"/sata gra.png"} width={20} height={20} alt="star" />
+			</div>
+			<div className=" md:hidden absolute top-[60rem] left-[17rem]">
+				<Image src={"/star.png"} width={10} height={10} alt="star" />
+			</div>
+			{/* <div className=" md:hidden absolute top-[90rem] left-[7rem]">
+				<Image src={"/star.png"} width={10} height={10} alt="star" />
+			</div>
+			<div className=" md:hidden absolute top-[60rem] left-[17rem]">
+				<Image src={"/star.png"} width={10} height={10} alt="star" />
+			</div> */}
+			{/* <div className=" md:hidden absolute top-[-4rem] left-[-3rem]">
+				<Image
+					src={"/purpleLens.png"}
+					width={300}
+					height={300}
+					alt="purple lens"
+					className="blur"
+				/>
+			</div> */}
+			{/* <div className=" md:hidden absolute top-[18rem] left-[22rem]">
+				<Image
+					src={"/purpleLens.png"}
+					width={300}
+					height={300}
+					alt="purple lens"
+					className="blur"
+				/>
+			</div> */}
+
+			{/* background stars and frames end here*/}
+
 			<div className="mx-10 my-28 md:flex text-white">
 				<div className="lg:text-start lg:w-full md:mx-32">
 					<div className="text-center lg:text-start">
@@ -107,7 +160,7 @@ const Privacy = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

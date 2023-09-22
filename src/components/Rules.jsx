@@ -3,16 +3,64 @@ import Image from "next/image";
 const Rules = () => {
 	return (
 		<>
-			<div className="md:flex mx-10 md:mx-0 my-10 text-white md:justify-center md:items-center md:w-full md:my-24">
+			<div className="relative md:flex mx-10 md:mx-0 my-10 text-white md:justify-center md:items-center md:w-full md:my-24">
+				{/* background beautifications */}
 				<div className="absolute">
 					<Image
 						src="/purpleLens.png"
-						width={500}
-						height={500}
+						width={900}
+						height={900}
 						alt="purple frame"
-						className="relative blur top-[-3.5rem] left-[-6rem] opacity-40"
+						className="relative blur top-[-3.5rem] left-[-11rem] opacity-30"
 					/>
 				</div>
+
+				<div className="hidden md:block absolute">
+					<Image
+						src="/rightPurpleLens.png"
+						width={200}
+						height={50}
+						alt="purple frame"
+						className="relative blur top-[15rem] left-[35rem] opacity-30"
+					/>
+				</div>
+
+				<div className="md:hidden absolute">
+					<Image
+						src="/rightPurpleLens.png"
+						width={200}
+						height={50}
+						alt="purple frame"
+						className="relative blur top-[12rem] left-[11rem] opacity-30"
+					/>
+				</div>
+
+				<div className="md:hidden absolute top-[10rem] left-[2rem]">
+					<Image src={"/star.png"} width={10} height={10} alt="star image" />
+				</div>
+				<div className="md:hidden absolute top-[39.5rem] left-[5rem]">
+					<Image src={"/star.png"} width={10} height={10} alt="star image" />
+				</div>
+				<div className="md:hidden absolute top-[25rem] left-[17rem]">
+					<Image
+						src={"/stargray.png"}
+						width={10}
+						height={10}
+						alt="star image"
+					/>
+				</div>
+				<div className="hidden md:block absolute top-[8rem] left-[19rem]">
+					<Image
+						src={"/stargray.png"}
+						width={20}
+						height={20}
+						alt="star image"
+					/>
+				</div>
+				<div className="hidden md:block absolute top-[22rem] left-[43rem]">
+					<Image src={"/star.png"} width={20} height={20} alt="star image" />
+				</div>
+
 				<div className="hidden md:block text-center justify-center items-center md:w-full md:text-start">
 					<div className="md:pl-32">
 						<div className="text-2xl font-bold">Rules and</div>
@@ -28,7 +76,7 @@ const Rules = () => {
 						what we're all about!
 					</div>
 				</div>
-				<div className="md:hidden flex justify-center md:w-full">
+				<div className="md:hidden md:ml-10 flex justify-center md:w-full">
 					<Image
 						src={"/rulesImg.png"}
 						width={500}

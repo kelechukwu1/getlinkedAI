@@ -20,7 +20,7 @@ const Landing = () => {
 			</div>
 
 			{/* background beautifications */}
-			<div>
+			<div className="">
 				<div className="absolute top-[4rem] md:top-[3rem] left-[-6rem] md:left-[-1rem]">
 					<Image
 						src="/purpleLens.png"
@@ -28,6 +28,34 @@ const Landing = () => {
 						height={500}
 						alt="purple lens"
 						className="blur opacity-50 z-0"
+					/>
+				</div>
+
+				<div className="absolute top-[8.5rem] md:top-[8.5rem] left-[9rem]  md:left-[11rem]">
+					<Image src={"/star.png"} width={12} height={12} alt="star image" />
+				</div>
+
+				<div className="md:hidden absolute md:top-[12rem] left-[22rem]">
+					<Image src={"/stargray.png"} width={8} height={8} alt="star image" />
+				</div>
+				<div className="hidden md:block absolute top-[8.5rem] md:top-[12rem] left-[22rem] md:left-[50rem]">
+					<Image
+						src={"/stargray.png"}
+						width={15}
+						height={15}
+						alt="star image"
+					/>
+				</div>
+
+				<div className="md:hidden absolute top-[21.5rem] left-[22rem]">
+					<Image src={"/stargray.png"} width={8} height={8} alt="star image" />
+				</div>
+				<div className="hidden md:block absolute md:top-[33rem] md:left-[32rem]">
+					<Image
+						src={"/stargray.png"}
+						width={15}
+						height={15}
+						alt="star image"
 					/>
 				</div>
 			</div>
