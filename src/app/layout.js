@@ -21,4 +21,14 @@ export default function RootLayout({ children }) {
 			</body>
 		</html>
 	);
+	return (
+		<html lang="en">
+			<body className={inter.className}>
+				<NavBar />
+				{children}
+				{/* footer section */}
+				<Footer />
+			</body>
+		</html>
+	);
 }
