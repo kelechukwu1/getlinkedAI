@@ -13,9 +13,11 @@ export default function Home() {
 		<main className="text-white">
 			{/* Landing page */}
 			<Landing />
+
 			<hr className="border-t-1 border-gray-500" />
 			{/* introduction to getlinked tech hackathon section*/}
 			<Introduction />
+
 			<hr className="border-t-1 border-gray-500" />
 			{/* rules and guidlines section*/}
 			<Rules />

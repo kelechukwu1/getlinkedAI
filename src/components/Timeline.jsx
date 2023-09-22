@@ -1,6 +1,20 @@
+import Image from "next/image";
+
 const Timeline = () => {
 	return (
-		<>
+		<div className="relative">
+			{/* background stars and frames */}
+			<div className=" md:hidden absolute top-[6.5rem] left-[4.5rem]">
+				<Image src={"/star pu.png"} width={15} height={15} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[35.5rem] left-[17rem]">
+				<Image src={"/star.png"} width={15} height={15} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[71rem] left-[2rem]">
+				<Image src={"/stargray.png"} width={15} height={15} alt="star image" />
+			</div>
+			{/* background stars and frames end here*/}
+
 			{/* large sceen design */}
 			<div className="my-20 mx-10 text-white hidden md:block">
 				<div className="font-bold text-2xl text-center">Timeline</div>
@@ -293,7 +307,7 @@ const Timeline = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

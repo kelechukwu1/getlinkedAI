@@ -2,7 +2,24 @@ import Image from "next/image";
 
 const Introduction = () => {
 	return (
-		<div>
+		<div className="relative">
+			{/* background beautifications */}
+			<div className="absolute top-[5rem] md:top-[6rem] left-[3rem] md:left-[9rem]">
+				<Image src={"/sata gra.png"} width={15} height={15} alt="star image" />
+			</div>
+
+			<div className="hidden md:block absolute md:top-[3.5rem] md:left-[65rem]">
+				<Image src={"/star pu.png"} width={20} height={20} alt="star image" />
+			</div>
+
+			<div className="md:hidden absolute top-[21rem] left-[23rem]">
+				<Image src={"/star pu.png"} width={12} height={12} alt="star image" />
+			</div>
+
+			<div className="absolute top-[17rem] md:top-[17rem] left-[12rem] md:left-[29rem]">
+				<Image src={"/arrow.png"} width={45} height={45} alt="star image" />
+			</div>
+
 			<div className="md:flex mx-10 md:mx-0 my-10 md:w-full md:my-32">
 				<div className="flex justify-center md:w-full">
 					<Image src={"/idea.png"} width={300} height={300} alt="big idea" />

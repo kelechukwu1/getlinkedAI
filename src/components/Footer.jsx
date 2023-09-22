@@ -2,10 +2,25 @@ import Link from "next/link";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoLocationSharp } from "react-icons/io5";
 import Socials from "./Socials";
+import Image from "next/image";
 
 const Footer = () => {
 	return (
-		<>
+		<div className="relative">
+			{/* background stars and frames */}
+			<div className=" md:hidden absolute top-[49rem] left-[7rem]">
+				<Image src={"/star pu.png"} width={15} height={15} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[8.5rem] left-[1rem]">
+				<Image src={"/star.png"} width={12} height={12} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[46rem] left-[20rem]">
+				<Image src={"/star.png"} width={12} height={12} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[29rem] left-[11rem]">
+				<Image src={"/stargray.png"} width={15} height={15} alt="star image" />
+			</div>
+			{/* background stars and frames end here*/}
 			<div className=" bg-custom-color2 text-white">
 				<div className="mx-10 md:mx-40 mt-[10rem] py-10">
 					<div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16 justify-evenly">
@@ -82,7 +97,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

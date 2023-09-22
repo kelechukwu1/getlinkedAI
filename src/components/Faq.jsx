@@ -2,7 +2,23 @@ import Image from "next/image";
 
 const Faq = () => {
 	return (
-		<div>
+		<div className="relative">
+			<div className="md:hidden absolute top-[-1rem] left-[4rem]">
+				<Image src={"/star pu.png"} width={20} height={20} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[45rem] left-[12rem]">
+				<Image src={"/sata gra.png"} width={15} height={15} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[53rem] left-[6rem]">
+				<Image src={"/sata gra.png"} width={10} height={10} alt="star image" />
+			</div>
+			<div className=" md:hidden absolute top-[57rem] left-[3rem]">
+				<Image src={"/stargray.png"} width={15} height={15} alt="star image" />
+			</div>
+			<div className="md:hidden absolute top-[67rem] left-[18rem]">
+				<Image src={"/star.png"} width={20} height={20} alt="star image" />
+			</div>
+
 			<div className="mx-10 text-sm md:mx-auto text-white md:justify-center md:items-center md:w-full md:my-24 my-20">
 				<div className="md:flex w-full md:w-full md:text-start md:justify-center md:items-center md:space-x-20">
 					<div className="w-[21.5rem] md:pl-52 md:w-[50rem] ">
