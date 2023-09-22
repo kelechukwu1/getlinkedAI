@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState, useRef } from "react";
 import Image from "next/image";
+import gsap from "gsap";
 
 import graphicsDesginer from "../../../public/svg/3d-graphic-designer.svg";
 import movingLady from "../../../public/moving-lady.png";
@@ -11,7 +14,17 @@ import stargray from "../../../public/stargray.png";
 import Modal from "@/components/Modal";
 import Button from "@/components/Button";
 
-const page = () => {
+const Page = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const modalRef = useRef();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    const modal = modalRef.current;
+    setOpenModal(true);
+  };
+
   return (
     <>
       <main className="w-[70%] md:w-[95%] mx-auto">
@@ -57,10 +70,10 @@ const page = () => {
                 className="absolute hidden md:block top-4 right-28"
               />
               <Image
-                src={stargray}
+                src={star}
                 alt=""
-                width={17}
-                className="absolute hidden md:block -bottom-6 right-16"
+                width={10}
+                className="absolute hidden md:block -bottom-4 right-16"
               />
               <h2 className="hidded md:block font-bold text-2xl text-color-2 mb-9">
                 Register
@@ -83,7 +96,12 @@ const page = () => {
               </div>
               <h2 className="text-2xl mt-2 mb-7">CREATE YOUR ACCOUNT</h2>
 
-              <form action="" method="post" className="relative">
+              <form
+                onSubmit={submitHandler}
+                action=""
+                method="post"
+                className="relative"
+              >
                 <Image
                   src={stargray}
                   alt=""
@@ -228,9 +246,9 @@ const page = () => {
         </section>
       </main>
 
-      {/* <Modal /> */}
+      <Modal ref={modalRef} openModal={openModal} setOpenModal={setOpenModal} />
     </>
   );
 };
 
-export default page;
+export default Page;

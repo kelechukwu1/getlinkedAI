@@ -7,7 +7,6 @@ import stargray from "../../../public/stargray.png";
 import sataGra from "../../../public/sata gra.png";
 import Image from "next/image";
 import Button from "@/components/Button";
-import Link from "next/link";
 
 const page = () => {
   return (
