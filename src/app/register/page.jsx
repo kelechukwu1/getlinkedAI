@@ -170,6 +170,7 @@ const Page = () => {
                     <input
                       type="text"
                       name="teamName"
+                      required
                       placeholder="Enter the name of your group"
                       className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white md:placeholder:text-xs xl:placeholder:text-base"
                     />
@@ -180,6 +181,7 @@ const Page = () => {
                     <input
                       type="phone"
                       name="phone"
+                      required
                       placeholder="Enter your phone number "
                       className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white md:placeholder:text-xs xl:placeholder:text-base"
                     />
@@ -190,6 +192,7 @@ const Page = () => {
                     <input
                       type="email"
                       name="email"
+                      required
                       placeholder="Enter your email address "
                       className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white md:placeholder:text-xs xl:placeholder:text-base"
                     />
@@ -200,6 +203,7 @@ const Page = () => {
                     <input
                       type="text"
                       name="projectTopic"
+                      required
                       placeholder="What is your group project topic "
                       className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white md:placeholder:text-xs xl:placeholder:text-base"
                     />
@@ -211,6 +215,7 @@ const Page = () => {
                       <select
                         name="category"
                         id="category"
+                        required
                         className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-3 "
                       >
                         <option className="text-black md:text-base" value="">
@@ -230,6 +235,7 @@ const Page = () => {
                       <select
                         name="groupSize"
                         id="groupSize"
+                        required
                         className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4"
                       >
                         <option className="text-black" value="">
@@ -250,6 +256,7 @@ const Page = () => {
                     <select
                       name="groupSize"
                       id="groupSize"
+                      required
                       className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4"
                     >
                       <option className="text-black" value="">
@@ -273,6 +280,7 @@ const Page = () => {
                   <input
                     type="checkbox"
                     name="privacyPolicy"
+                    required
                     id="privacyPolicy"
                     className="bg-transparent cursor-pointer"
                   />
