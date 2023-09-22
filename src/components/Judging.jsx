@@ -3,9 +3,9 @@ import Button from "./Button";
 const Judging = () => {
 	return (
 		<>
-			<div className="md:flex mx-10 my-20 text-white  md:mx-0 md:justify-center md:items-center md:w-full md:my-24 relative">
+			<div className="md:flex mx-10 my-20 text-white  lg:mx-20 md:justify-center md:items-center md:my-24 relative">
 				{/* background beautifications */}
-				<div className="absolute blur top-[6rem] left-[-5rem] opacity-50 z-10">
+				<div className="absolute blur top-[6rem] md:top-[20rem] left-[-5rem] opacity-50 z-10">
 					<Image
 						src="/purpleLens.png"
 						width={500}
@@ -15,15 +15,7 @@ const Judging = () => {
 				</div>
 
 				<div className="absolute">
-					<Image
-						src="/rightPurpleLens.png"
-						width={200}
-						height={50}
-						alt="purple frame"
-						className="relative blur top-[47rem] left-[11rem] opacity-50 z-10"
-					/>
-
-					<div className="md:hidden absolute top-[-3rem] left-[9rem]">
+					<div className="relative top-[-3rem] md:top[-3rem] md:left-[-25rem] left-[9rem]">
 						<Image
 							src={"/star pu.png"}
 							width={20}
@@ -31,7 +23,7 @@ const Judging = () => {
 							alt="star image"
 						/>
 					</div>
-					<div className=" md:hidden absolute top-[8rem] left-[11rem]">
+					<div className=" md:hidden relative top-[8rem] left-[11rem]">
 						<Image
 							src={"/stargray.png"}
 							width={15}
@@ -39,7 +31,7 @@ const Judging = () => {
 							alt="star image"
 						/>
 					</div>
-					<div className="md:hidden absolute top-[66rem] left-[11.5rem]">
+					<div className="md:hidden relative top-[65rem] left-[17rem] z-10">
 						<Image src={"/star.png"} width={20} height={20} alt="star image" />
 					</div>
 				</div>
@@ -47,7 +39,7 @@ const Judging = () => {
 				<div className="flex justify-center md:w-full z-0">
 					<Image src={"/judges.png"} width={500} height={500} alt="judges" />
 				</div>
-				<div className="text-center my-5 justify-center items-center md:w-full md:text-start md:pr-32">
+				<div className="md:mx-20 text-center my-5 justify-center items-center md:w-full md:text-start lg:pr-32">
 					<div className="text-2xl font-bold">
 						Judging Criteria{" "}
 						<span className="text-color-2">Key attributes</span>

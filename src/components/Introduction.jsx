@@ -8,7 +8,7 @@ const Introduction = () => {
 				<Image src={"/sata gra.png"} width={15} height={15} alt="star image" />
 			</div>
 
-			<div className="hidden md:block absolute md:top-[3.5rem] md:left-[65rem]">
+			<div className="hidden md:block absolute md:top-[3.5rem] md:left-[47rem] lg:left-[65rem]">
 				<Image src={"/star pu.png"} width={20} height={20} alt="star image" />
 			</div>
 
@@ -16,12 +16,12 @@ const Introduction = () => {
 				<Image src={"/star pu.png"} width={12} height={12} alt="star image" />
 			</div>
 
-			<div className="absolute top-[17rem] md:top-[17rem] left-[12rem] md:left-[29rem]">
+			<div className="absolute top-[17rem] lg:top-[17rem] left-[12rem] lg:left-[29rem] md:left-[23rem] md:top-[17rem]">
 				<Image src={"/arrow.png"} width={45} height={45} alt="star image" />
 			</div>
 
-			<div className="md:flex mx-10 md:mx-0 my-10 md:w-full md:my-32">
-				<div className="flex justify-center md:w-full">
+			<div className="md:flex mx-10 md:mx-0 my-10 md:w-full md:my-32 items-center justify-center">
+				<div className="flex justify-center md:w-full md:ml-10">
 					<Image src={"/idea.png"} width={300} height={300} alt="big idea" />
 				</div>
 				<div className="text-center my-5 md:w-full md:text-start">
@@ -31,7 +31,7 @@ const Introduction = () => {
 					<div className="text-color-2 text-2xl font-bold mb-5">
 						tech Hackathon1.0
 					</div>
-					<div className="md:pr-32">
+					<div className="lg:pr-32 md:pr-24">
 						Our tech hackathon is a melting pot of visionaries, and its purpose
 						is as clear as day: to shape the future. Whether you're a coding
 						genius, a design maverick, or a concept wizard, you'll have the

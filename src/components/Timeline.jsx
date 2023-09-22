@@ -4,13 +4,13 @@ const Timeline = () => {
 	return (
 		<div className="relative">
 			{/* background stars and frames */}
-			<div className=" md:hidden absolute top-[6.5rem] left-[4.5rem]">
+			<div className="absolute top-[6.5rem] md:top-[12rem] md:left:-[9rem] left-[4.5rem] lg:left-[26rem]">
 				<Image src={"/star pu.png"} width={15} height={15} alt="star image" />
 			</div>
-			<div className=" md:hidden absolute top-[35.5rem] left-[17rem]">
+			<div className="absolute top-[35.5rem] md:top-[40rem] md:left-[45rem] left-[17rem] lg:left-[50rem]">
 				<Image src={"/star.png"} width={15} height={15} alt="star image" />
 			</div>
-			<div className=" md:hidden absolute top-[71rem] left-[2rem]">
+			<div className="absolute top-[71rem] md:top-[75rem] md:left-[15rem] left-[2rem]">
 				<Image src={"/stargray.png"} width={15} height={15} alt="star image" />
 			</div>
 			{/* background stars and frames end here*/}
@@ -18,7 +18,7 @@ const Timeline = () => {
 			{/* large sceen design */}
 			<div className="my-20 mx-10 text-white hidden md:block">
 				<div className="font-bold text-2xl text-center">Timeline</div>
-				<div className="text-center mt-5 mb-10 md:mx-[25rem]">
+				<div className="text-center mt-5 mb-10 lg:mx-[25rem] md:mx-[13rem]">
 					Here is the breakdown of the time we anticipate using for the upcoming
 					event.
 				</div>
@@ -62,7 +62,7 @@ const Timeline = () => {
 
 						<div className="w-[30rem] text-start">
 							<div className="text-color-2 font-bold">
-								Hackathon Announcement
+								Teams Registration begins
 							</div>
 							<div>
 								The getlinked tech hackathon 1.0 formally announced to the
@@ -79,7 +79,7 @@ const Timeline = () => {
 					<div className="flex items-center justify-center ml-[0.5rem] gap-10">
 						<div className="w-[30rem] text-end">
 							<div className="text-color-2 font-bold">
-								Hackathon Announcement
+								Teams Registration ends
 							</div>
 							<div>
 								The getlinked tech hackathon 1.0 formally announced to the
@@ -111,7 +111,7 @@ const Timeline = () => {
 
 						<div className="w-[30rem] text-start">
 							<div className="text-color-2 font-bold">
-								Hackathon Announcement
+								Announcement of the accepted teams and ideas
 							</div>
 							<div>
 								The getlinked tech hackathon 1.0 formally announced to the
@@ -128,7 +128,7 @@ const Timeline = () => {
 					<div className="flex items-center justify-center ml-[0.5rem] gap-10">
 						<div className="w-[30rem] text-end">
 							<div className="text-color-2 font-bold">
-								Hackathon Announcement
+								Getlinked Hackathon 1.0 Officially Begins
 							</div>
 							<div>
 								The getlinked tech hackathon 1.0 formally announced to the
@@ -159,9 +159,7 @@ const Timeline = () => {
 						</div>
 
 						<div className="w-[30rem] text-start">
-							<div className="text-color-2 font-bold">
-								Hackathon Announcement
-							</div>
+							<div className="text-color-2 font-bold">Demo Day</div>
 							<div>
 								The getlinked tech hackathon 1.0 formally announced to the
 								geneal public and teams begin to get ready to register

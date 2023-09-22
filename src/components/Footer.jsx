@@ -8,16 +8,16 @@ const Footer = () => {
 	return (
 		<div className="relative">
 			{/* background stars and frames */}
-			<div className=" md:hidden absolute top-[49rem] left-[7rem]">
+			<div className="absolute top-[49rem] left-[7rem]">
 				<Image src={"/star pu.png"} width={15} height={15} alt="star image" />
 			</div>
-			<div className=" md:hidden absolute top-[8.5rem] left-[1rem]">
+			<div className="absolute top-[8.5rem] left-[1rem]">
 				<Image src={"/star.png"} width={12} height={12} alt="star image" />
 			</div>
-			<div className=" md:hidden absolute top-[46rem] left-[20rem]">
+			<div className="absolute top-[46rem] left-[20rem]">
 				<Image src={"/star.png"} width={12} height={12} alt="star image" />
 			</div>
-			<div className=" md:hidden absolute top-[29rem] left-[11rem]">
+			<div className="absolute top-[29rem] left-[11rem]">
 				<Image src={"/stargray.png"} width={15} height={15} alt="star image" />
 			</div>
 			{/* background stars and frames end here*/}
@@ -35,7 +35,7 @@ const Footer = () => {
 								showcasing young and talented individuals in the field of
 								technology
 							</div>
-							<div className="flex justify-center md:justify-start md:mt-20 space-x-5 items-center my-10">
+							<div className="flex justify-center lg:justify-start md:mt-20 space-x-5 items-center my-10">
 								<div className="w-[1/2] p-2">Terms of Use</div>
 								<div className="border-[1px] border-purple-600 h-5"></div>
 								<div className="w-[1/2] p-2">Privacy Policy</div>
@@ -60,7 +60,7 @@ const Footer = () => {
 									<div>
 										<Link href={"register"}>Register</Link>
 									</div>
-									<div className="flex">
+									<div className="flex md:py-10">
 										<div className="mr-5 text-color-2">Follow us</div>
 										<Socials />
 									</div>

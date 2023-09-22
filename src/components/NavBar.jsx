@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { RiCloseLine } from "react-icons/ri";
 import Button from "./Button";
@@ -9,23 +9,6 @@ import Button from "./Button";
 const NavBar = () => {
 	const pathname = usePathname();
 	const [open, setOpen] = useState(false);
-	const navbarRef = useRef(null);
-
-	// useEffect(() => {
-	// 	const handleOutsideClick = (event) => {
-	// 		if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-	// 			setOpen(false);
-	// 		}
-	// 	};
-
-	// 	if (open) {
-	// 		document.addEventListener("click", handleOutsideClick);
-	// 	}
-
-	// 	return () => {
-	// 		document.removeEventListener("click", handleOutsideClick);
-	// 	};
-	// }, [open]);
 
 	const navLinks = [
 		{
@@ -48,75 +31,68 @@ const NavBar = () => {
 	return (
 		<>
 			<header>
-				<div className="md:flex md:p-5 md:px-24 md:justify-between items-center shadow bg-custom-color">
-					<div className="flex justify-between md:justify-normal items-center p-4 mx-5">
-						<div>
-							<Link
-								href="/"
-								onClick={() => {
-									open ? setOpen(!open) : !open;
-								}}
-							>
-								<div className="relative z-10">
-									<span className="text-white font-bold text-3xl">get</span>
-									<span className="text-color-2 font-bold text-3xl">
-										linked
-									</span>
-								</div>
-							</Link>
-						</div>
-						<div
-							className="md:hidden cursor-pointer text-white"
-							onClick={() => {
-								setOpen(!open);
-							}}
-						>
-							{!open ? (
-								// <RiMenu4Line className="w-6 h-6" />
-								<div>
-									<svg
-										width="19"
-										height="14"
-										viewBox="0 0 19 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M1.35714 0H8.14286C8.50279 0 8.84799 0.1475 9.1025 0.410051C9.35701 0.672601 9.5 1.0287 9.5 1.4C9.5 1.7713 9.35701 2.1274 9.1025 2.38995C8.84799 2.6525 8.50279 2.8 8.14286 2.8H1.35714C0.997206 2.8 0.652012 2.6525 0.397498 2.38995C0.142984 2.1274 0 1.7713 0 1.4C0 1.0287 0.142984 0.672601 0.397498 0.410051C0.652012 0.1475 0.997206 0 1.35714 0ZM10.8571 11.2H17.6429C18.0028 11.2 18.348 11.3475 18.6025 11.6101C18.857 11.8726 19 12.2287 19 12.6C19 12.9713 18.857 13.3274 18.6025 13.5899C18.348 13.8525 18.0028 14 17.6429 14H10.8571C10.4972 14 10.152 13.8525 9.8975 13.5899C9.64298 13.3274 9.5 12.9713 9.5 12.6C9.5 12.2287 9.64298 11.8726 9.8975 11.6101C10.152 11.3475 10.4972 11.2 10.8571 11.2ZM1.35714 5.6H17.6429C18.0028 5.6 18.348 5.7475 18.6025 6.01005C18.857 6.2726 19 6.6287 19 7C19 7.3713 18.857 7.7274 18.6025 7.98995C18.348 8.2525 18.0028 8.4 17.6429 8.4H1.35714C0.997206 8.4 0.652012 8.2525 0.397498 7.98995C0.142984 7.7274 0 7.3713 0 7C0 6.6287 0.142984 6.2726 0.397498 6.01005C0.652012 5.7475 0.997206 5.6 1.35714 5.6Z"
-											fill="white"
-										/>
-									</svg>
-								</div>
-							) : (
-								<RiCloseLine className="w-6 h-6" />
-							)}
-						</div>
-					</div>
-
-					<div
-						ref={navbarRef}
-						className="hidden md:flex md:items-center pb-5 md:pb-0  md:z-auto left-0 w-full md:w-auto md:pl-40 pl-9 transition-all duration-500 ease-in text-white"
-					>
-						<div className="md:flex items-center">
+				<div className="md:flex md:p-5 items-center justify-between shadow bg-custom-color">
+					<div className="p-5 md:p-0 md:flex w-full md:justify-between items-center">
+						<div className="flex justify-between items-center">
+							<div>
+								<Link
+									href="/"
+									onClick={() => {
+										open ? setOpen(!open) : !open;
+									}}
+								>
+									<div className="relative z-10">
+										<span className="text-white font-bold text-3xl">get</span>
+										<span className="text-color-2 font-bold text-3xl">
+											linked
+										</span>
+									</div>
+								</Link>
+							</div>
 							<div
+								className="md:hidden cursor-pointer text-white"
 								onClick={() => {
 									setOpen(!open);
 								}}
-								className="md:flex"
 							>
-								{navLinks.map(({ link, name }) => (
-									<Link href={link} key={name} className="mx-2 text-center">
-										<div
-											className={`md:px-4 my-5 md:my-0 ${
-												pathname.startsWith(link) ? "" : ""
-											}`}
+								{!open ? (
+									<div>
+										<svg
+											width="19"
+											height="14"
+											viewBox="0 0 19 14"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
 										>
-											{name}
-										</div>
-									</Link>
-								))}
+											<path
+												d="M1.35714 0H8.14286C8.50279 0 8.84799 0.1475 9.1025 0.410051C9.35701 0.672601 9.5 1.0287 9.5 1.4C9.5 1.7713 9.35701 2.1274 9.1025 2.38995C8.84799 2.6525 8.50279 2.8 8.14286 2.8H1.35714C0.997206 2.8 0.652012 2.6525 0.397498 2.38995C0.142984 2.1274 0 1.7713 0 1.4C0 1.0287 0.142984 0.672601 0.397498 0.410051C0.652012 0.1475 0.997206 0 1.35714 0ZM10.8571 11.2H17.6429C18.0028 11.2 18.348 11.3475 18.6025 11.6101C18.857 11.8726 19 12.2287 19 12.6C19 12.9713 18.857 13.3274 18.6025 13.5899C18.348 13.8525 18.0028 14 17.6429 14H10.8571C10.4972 14 10.152 13.8525 9.8975 13.5899C9.64298 13.3274 9.5 12.9713 9.5 12.6C9.5 12.2287 9.64298 11.8726 9.8975 11.6101C10.152 11.3475 10.4972 11.2 10.8571 11.2ZM1.35714 5.6H17.6429C18.0028 5.6 18.348 5.7475 18.6025 6.01005C18.857 6.2726 19 6.6287 19 7C19 7.3713 18.857 7.7274 18.6025 7.98995C18.348 8.2525 18.0028 8.4 17.6429 8.4H1.35714C0.997206 8.4 0.652012 8.2525 0.397498 7.98995C0.142984 7.7274 0 7.3713 0 7C0 6.6287 0.142984 6.2726 0.397498 6.01005C0.652012 5.7475 0.997206 5.6 1.35714 5.6Z"
+												fill="white"
+											/>
+										</svg>
+									</div>
+								) : (
+									<RiCloseLine className="w-6 h-6" />
+								)}
 							</div>
-							<div className="ml-20">
+						</div>
+
+						<div className="hidden md:flex md:items-center md:pb-0 md:z-auto w-full md:justify-end transition-all duration-500 ease-in text-white">
+							<div className="items-center">
+								<div className="md:flex">
+									{navLinks.map(({ link, name }) => (
+										<Link href={link} key={name} className="mx-2 text-center">
+											<div
+												className={`md:px-4 my-5 md:my-0 ${
+													pathname.startsWith(link) ? "" : ""
+												}`}
+											>
+												{name}
+											</div>
+										</Link>
+									))}
+								</div>
+							</div>
+							<div className=" md:ml-5 lg:ml-20">
 								<Button text={"register"} />
 							</div>
 						</div>
@@ -211,3 +187,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+// onClick={() => {
+// 	setOpen(!open);
+// }}
