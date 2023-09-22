@@ -15,26 +15,6 @@ const Rules = () => {
 					/>
 				</div>
 
-				<div className="hidden md:block absolute">
-					<Image
-						src="/rightPurpleLens.png"
-						width={200}
-						height={50}
-						alt="purple frame"
-						className="relative blur top-[15rem] left-[35rem] opacity-30"
-					/>
-				</div>
-
-				<div className="md:hidden absolute">
-					<Image
-						src="/rightPurpleLens.png"
-						width={200}
-						height={50}
-						alt="purple frame"
-						className="relative blur top-[12rem] left-[11rem] opacity-30"
-					/>
-				</div>
-
 				<div className="md:hidden absolute top-[10rem] left-[2rem]">
 					<Image src={"/star.png"} width={10} height={10} alt="star image" />
 				</div>
@@ -99,7 +79,7 @@ const Rules = () => {
 						what we're all about!
 					</div>
 				</div>
-				<div className="hidden md:block flex justify-center md:w-full">
+				<div className="hidden md:flex justify-center md:w-full">
 					<Image
 						src={"/rulesImg.png"}
 						width={500}

@@ -38,7 +38,7 @@ const Privacy = () => {
 			</div>
 			{/* background stars and frames end here*/}
 
-			<div className="mx-10 my-28 md:flex text-white">
+			<div className="mx-10 my-28 md:flex text-white w-full">
 				<div className="lg:text-start lg:w-full md:mx-32">
 					<div className="text-center lg:text-start">
 						<div my-5>
@@ -120,7 +120,7 @@ const Privacy = () => {
 						</div>
 					</div>
 				</div>
-				<div className="flex justify-center mt-10 md:pt-16 pb-10 md:pb-0 lg:mt-5 relative lg:w-full">
+				<div className="flex justify-center mt-10 md:pt-16 pb-10 md:pb-0 lg:mt-5 relative w-full">
 					<div className="relative z-10">
 						<Image
 							src="/privacy.png"
