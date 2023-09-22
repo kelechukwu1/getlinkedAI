@@ -145,7 +145,7 @@ const Page = () => {
           <div className="md:hidden">
             <p className="text-color-2 text-center mt-10 mb-2">Share on</p>
             <div className="mb-10">
-              <Socials />
+              <Socials id="share" />
             </div>
           </div>
         </div>
