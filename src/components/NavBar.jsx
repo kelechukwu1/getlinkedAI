@@ -11,6 +11,22 @@ const NavBar = () => {
 	const [open, setOpen] = useState(false);
 	const navbarRef = useRef(null);
 
+	// useEffect(() => {
+	// 	const handleOutsideClick = (event) => {
+	// 		if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+	// 			setOpen(false);
+	// 		}
+	// 	};
+
+	// 	if (open) {
+	// 		document.addEventListener("click", handleOutsideClick);
+	// 	}
+
+	// 	return () => {
+	// 		document.removeEventListener("click", handleOutsideClick);
+	// 	};
+	// }, [open]);
+
 	const navLinks = [
 		{
 			name: "Timeline",
@@ -56,6 +72,7 @@ const NavBar = () => {
 							}}
 						>
 							{!open ? (
+								// <RiMenu4Line className="w-6 h-6" />
 								<div>
 									<svg
 										width="19"
