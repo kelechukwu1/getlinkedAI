@@ -29,23 +29,33 @@ const Page = () => {
     const image = imageRef.current;
     const form = formCardRef.current;
 
-    const mm = gsap.matchMedia();
+    const matchMedia = gsap.matchMedia();
 
-    gsap
-      .timeline()
-      .from(image, {
-        xPercent: -100,
-        autoAlpha: 0,
-      })
-      .from(form, {
-        yPercent: -100,
-        autoAlpha: 0,
-      })
-      .from("#img", {
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-      });
+    let conditions = {
+      isMobile: "(min-width: 300px)",
+      isDesktop: "(min-width: 768px)",
+    };
+
+    // matchMedia.add(conditions, (context) => {
+    //   let { isMobile, isDesktop } = context.conditions;
+
+    //   gsap
+    //     .timeline()
+    //     .from(image, {
+    //       xPercent: -100,
+    //       autoAlpha: 0,
+    //     })
+    //     .from(form, {
+    //       yPercent: isDesktop ? -100 : 0,
+    //       xPercent: isMobile ? -100 : 0,
+    //       autoAlpha: 0,
+    //     })
+    //     .from("#img", {
+    //       opacity: 0,
+    //       duration: 1,
+    //       stagger: 0.2,
+    //     });
+    // });
   }, []);
 
   return (
