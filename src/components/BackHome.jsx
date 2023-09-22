@@ -4,7 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 
 import Image from "next/image";
-import Ellipse from "../../public/Ellipse 4.svg";
+import Ellipse from "../../public/svg/Ellipse 4.svg";
 
 const BackHome = () => {
   const router = useRouter();
