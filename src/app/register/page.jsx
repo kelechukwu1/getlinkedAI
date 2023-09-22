@@ -1,9 +1,13 @@
 import React from "react";
-
 import Image from "next/image";
+
 import graphicsDesginer from "../../../public/svg/3d-graphic-designer.svg";
 import movingLady from "../../../public/moving-lady.png";
 import movingMan from "../../../public/moving-man.png";
+import starpu from "../../../public/star pu.png";
+import star from "../../../public/star.png";
+import stargray from "../../../public/stargray.png";
+
 import Modal from "@/components/Modal";
 import Button from "@/components/Button";
 
@@ -23,11 +27,44 @@ const page = () => {
                 fill={true}
                 className="object-cover"
               />
+              <Image
+                src={starpu}
+                alt=""
+                width={12}
+                className="absolute bottom-20 -right-10 md:bottom-0 md:right-0 md:top-3 md:left-12"
+              />
+              <Image
+                src={stargray}
+                alt=""
+                width={12}
+                className="absolute hidden md:block md:bottom-0 md:left-[4.3rem]"
+              />
+              <Image
+                src={starpu}
+                alt=""
+                width={12}
+                className="absolute hidden md:block md:bottom-20 md:right-10"
+              />
             </div>
           </div>
 
           <div className="md:flex-1 mt-8 text-white">
-            <div className="md:border md:p-14 lg:p-10 md:rounded-md md:border-transparent md:shadow-2xl md:shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)]">
+            <div className="md:border md:p-14 lg:p-10 md:rounded-md md:border-[#FFFFFF08] md:shadow-2xl md:bg-[#FFFFFF08] relative">
+              <Image
+                src={stargray}
+                alt=""
+                width={17}
+                className="absolute hidden md:block top-4 right-28"
+              />
+              <Image
+                src={stargray}
+                alt=""
+                width={17}
+                className="absolute hidden md:block -bottom-6 right-16"
+              />
+              <h2 className="hidded md:block font-bold text-2xl text-color-2 mb-9">
+                Register
+              </h2>
               <div className="flex items-center">
                 <p className="mb-2">Be part of this movement!</p>
 
@@ -46,7 +83,20 @@ const page = () => {
               </div>
               <h2 className="text-2xl mt-2 mb-7">CREATE YOUR ACCOUNT</h2>
 
-              <form action="" method="post">
+              <form action="" method="post" className="relative">
+                <Image
+                  src={stargray}
+                  alt=""
+                  width={15}
+                  className="absolute top-5 -left-7 md:hidden"
+                />
+
+                <Image
+                  src={starpu}
+                  alt=""
+                  width={10}
+                  className="absolute bottom-[15.5rem] -right-5 md:hidden"
+                />
                 <div className="flex flex-col gap-5 md:gap-3 md:grid grid-cols-2 grid-rows-2">
                   <div className="space-y-2 col-span-1">
                     <label htmlFor="teamName">{"Team's Name"}</label>
@@ -166,7 +216,11 @@ const page = () => {
                 </div>
 
                 <div className="flex justify-center mt-5">
-                  <Button text={"Submit"} type="submit" />
+                  <Button
+                    text={"Register Now"}
+                    type="submit"
+                    customClasses="md:w-full"
+                  />
                 </div>
               </form>
             </div>
@@ -174,7 +228,7 @@ const page = () => {
         </section>
       </main>
 
-      <Modal />
+      {/* <Modal /> */}
     </>
   );
 };
