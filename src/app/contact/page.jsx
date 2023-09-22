@@ -6,6 +6,8 @@ import star from "../../../public/star.png";
 import stargray from "../../../public/stargray.png";
 import sataGra from "../../../public/sata gra.png";
 import Image from "next/image";
+import Button from "@/components/Button";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -87,13 +89,8 @@ const page = () => {
               className="w-full rounded-md pl-7 pt-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)]"
             />
 
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className="text-white text-xl bg-gradient-to-r from-pink-500 via-purple-500 py-4 px-16 text-center rounded-md hover:bg-pink-500 transition-all duration-500 w-fit"
-              >
-                Submit
-              </button>
+            <div className="flex justify-center mt-7 mb-4">
+              <Button text={"Submit"} type="submit" />
             </div>
 
             <Image

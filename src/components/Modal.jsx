@@ -7,6 +7,7 @@ import successfullyDone from "../../public/svg/successfully-done.svg";
 import stargray from "../../public/stargray.png";
 import star from "../../public/star pu.png";
 import Image from "next/image";
+import Button from "./Button";
 
 const Modal = () => {
   return (
@@ -54,12 +55,11 @@ const Modal = () => {
                 </div>
 
                 <div className="px-9 md:px-20">
-                  <button
-                    type="submit"
-                    className="text-white text-lg bg-gradient-to-r from-pink-500 via-purple-500 py-3 text-center rounded-md hover:bg-pink-500 transition-all duration-500 w-full"
-                  >
-                    Back
-                  </button>
+                  <Button
+                    className="w-full"
+                    text={"Back"}
+                    customClasses="w-full"
+                  />
                 </div>
               </div>
             </div>

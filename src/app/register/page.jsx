@@ -5,6 +5,7 @@ import graphicsDesginer from "../../../public/svg/3d-graphic-designer.svg";
 import movingLady from "../../../public/moving-lady.png";
 import movingMan from "../../../public/moving-man.png";
 import Modal from "@/components/Modal";
+import Button from "@/components/Button";
 
 const page = () => {
   return (
@@ -165,12 +166,7 @@ const page = () => {
                 </div>
 
                 <div className="flex justify-center mt-5">
-                  <button
-                    type="submit"
-                    className="text-white text-xl bg-gradient-to-r from-pink-500 via-purple-500 py-4 px-16 text-center rounded-md hover:bg-pink-500 transition-all duration-500 w-fit"
-                  >
-                    Submit
-                  </button>
+                  <Button text={"Submit"} type="submit" />
                 </div>
               </form>
             </div>
@@ -178,7 +174,7 @@ const page = () => {
         </section>
       </main>
 
-      {/* <Modal /> */}
+      <Modal />
     </>
   );
 };
