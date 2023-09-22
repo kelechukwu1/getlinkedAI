@@ -36,26 +36,26 @@ const Page = () => {
       isDesktop: "(min-width: 768px)",
     };
 
-    // matchMedia.add(conditions, (context) => {
-    //   let { isMobile, isDesktop } = context.conditions;
+    matchMedia.add(conditions, (context) => {
+      let { isMobile, isDesktop } = context.conditions;
 
-    //   gsap
-    //     .timeline()
-    //     .from(image, {
-    //       xPercent: -100,
-    //       autoAlpha: 0,
-    //     })
-    //     .from(form, {
-    //       yPercent: isDesktop ? -100 : 0,
-    //       xPercent: isMobile ? -100 : 0,
-    //       autoAlpha: 0,
-    //     })
-    //     .from("#img", {
-    //       opacity: 0,
-    //       duration: 1,
-    //       stagger: 0.2,
-    //     });
-    // });
+      gsap
+        .timeline()
+        .from(image, {
+          xPercent: -100,
+          autoAlpha: 0,
+        })
+        .from(form, {
+          yPercent: isDesktop ? -100 : 0,
+          xPercent: isMobile ? -100 : 0,
+          autoAlpha: 0,
+        })
+        .from("#img", {
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+        });
+    });
   }, []);
 
   return (
