@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 
@@ -16,14 +16,15 @@ import Button from "@/components/Button";
 
 const Page = () => {
   const [openModal, setOpenModal] = useState(false);
-  const modalRef = useRef();
+  const imageRef = useRef();
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    const modal = modalRef.current;
     setOpenModal(true);
   };
+
+  useEffect(() => {}, []);
 
   return (
     <>
@@ -33,7 +34,10 @@ const Page = () => {
         </h2>
         <section className="md:flex items-center ">
           <div className="md:flex-0 lg:flex-1 mt-12 flex justify-center">
-            <div className="relative w-52 h-52 md:w-80 md:h-80 lg:w-96 lg:h-96 ">
+            <div
+              className="relative w-52 h-52 md:w-80 md:h-80 lg:w-96 lg:h-96 "
+              ref={imageRef}
+            >
               <Image
                 src={graphicsDesginer}
                 alt="3D Graphics Designer Showing Thumbs Up"
@@ -246,7 +250,7 @@ const Page = () => {
         </section>
       </main>
 
-      <Modal ref={modalRef} openModal={openModal} setOpenModal={setOpenModal} />
+      <Modal openModal={openModal} setOpenModal={setOpenModal} />
     </>
   );
 };

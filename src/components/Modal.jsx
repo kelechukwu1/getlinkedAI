@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import winkEmoji from "../../public/svg/wink-emoji.svg";
@@ -15,7 +15,7 @@ const Modal = ({ openModal, setOpenModal }) => {
   const wrapperRef = useRef();
   const buttonRef = useRef();
 
-  const closeModal = () => {
+  const closeAnimation = () => {
     const wrapper = wrapperRef.current;
 
     gsap
@@ -33,25 +33,29 @@ const Modal = ({ openModal, setOpenModal }) => {
       });
   };
 
-  const handleClose = (e) => {
-    const wrapper = wrapperRef.current;
+  const closeModal = () => {
+    closeAnimation();
+  };
 
+  const handleClose = (e) => {
     if (e.target.id === "wrapper") {
-      gsap
-        .timeline()
-        .to(wrapper, {
-          scale: 1.2,
-        })
-        .to(wrapper, {
-          scale: 0.6,
-          opacity: 0,
-          duration: 0.5,
-          onComplete: () => {
-            setOpenModal(false);
-          },
-        });
+      closeAnimation();
     }
   };
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (openModal) {
+      gsap.from(wrapper, {
+        keyframes: {
+          "0%": { opacity: 0, scale: 0 },
+          "75%": { opacity: 1, scale: 1.2 },
+          "100%": { scale: 1 },
+        },
+        duration: 1,
+      });
+    }
+  }, [openModal]);
 
   return (
     <>
