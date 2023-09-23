@@ -192,7 +192,7 @@ const Landing = () => {
         {/* mobile screen design */}
         <div className="md:hidden">
           <div>
-            <div className="flex py-6 px-7 text-xl font-bold">
+            <div className="flex py-6 px-7 text-base md:text-xl font-bold">
               Igniting a Revolution in HR Innovation
             </div>
             <div className="absolute">
@@ -201,7 +201,7 @@ const Landing = () => {
                 width={100}
                 height={100}
                 alt="pink line"
-                className="relative w-[8.5rem] top-[-1.5rem] md:left-[67rem] left-[16rem]"
+                className="relative w-[8.5rem] top-[-1.5rem] md:left-[67rem] left-[4rem]"
               />
             </div>
           </div>
