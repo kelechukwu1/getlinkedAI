@@ -18,7 +18,7 @@ import Button from "@/components/Button";
 
 const Page = () => {
 	const [openModal, setOpenModal] = useState(false);
-	//input field states
+
 	const formCardRef = useRef();
 	const imageRef = useRef();
 
@@ -136,7 +136,7 @@ const Page = () => {
 						className="md:flex-1 mt-8 text-white invisible"
 						ref={formCardRef}
 					>
-						<div className="md:border md:p-14 lg:p-10 md:rounded-md md:border-[#FFFFFF08] md:shadow-2xl md:bg-[#FFFFFF08] relative">
+						<div className="md:border md:p-5 lg:p-10 md:rounded-md md:border-[#FFFFFF08] md:shadow-2xl md:bg-[#FFFFFF08] relative">
 							<Image
 								src={stargray}
 								alt=""
@@ -197,56 +197,41 @@ const Page = () => {
 									<div className="space-y-2 col-span-1">
 										<label htmlFor="teamName">{"Team's Name"}</label>
 										<input
-											value={values.teamName}
-											onChange={handleChange}
-											onBlur={handleBlur}
 											type="text"
 											name="teamName"
 											required
 											placeholder="Enter the name of your group"
-											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white md:placeholder:text-xs xl:placeholder:text-base"
+											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent  text-white md:placeholder:text-xs xl:placeholder:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
 										/>
 									</div>
-
 									<div className="space-y-2 col-span-1">
 										<label htmlFor="phone">Phone</label>
 										<input
-											value={values.phone}
-											onChange={handleChange}
-											onBlur={handleBlur}
 											type="phone"
 											name="phone"
 											required
 											placeholder="Enter your phone number "
-											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white md:placeholder:text-xs xl:placeholder:text-base"
+											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent  text-white md:placeholder:text-xs xl:placeholder:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
 										/>
 									</div>
-
 									<div className="space-y-2">
 										<label htmlFor="email">Email</label>
 										<input
-											value={values.email}
-											onChange={handleChange}
-											onBlur={handleBlur}
 											type="email"
 											name="email"
 											required
 											placeholder="Enter your email address "
-											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white md:placeholder:text-xs xl:placeholder:text-base"
+											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent text-white md:placeholder:text-xs xl:placeholder:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
 										/>
 									</div>
-
 									<div className="space-y-2">
 										<label htmlFor="projectTopic">Project Topic</label>
 										<input
-											value={values.projectTopic}
-											onChange={handleChange}
-											onBlur={handleBlur}
 											type="text"
 											name="projectTopic"
 											required
 											placeholder="What is your group project topic "
-											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white md:placeholder:text-xs xl:placeholder:text-base"
+											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent text-white md:placeholder:text-xs xl:placeholder:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
 										/>
 									</div>
 
@@ -254,21 +239,24 @@ const Page = () => {
 										<div className="flex flex-col flex-1 md:flex-0 space-y-1">
 											<label htmlFor="category">Category</label>
 											<select
-												value={values.category}
-												onChange={handleChange}
-												onBlur={handleBlur}
 												name="category"
 												id="category"
 												required
-												className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-3 "
+												className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-3 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
 											>
-												<option className="text-black md:text-base" value="">
-													Select
+												<option className="text-white bg-[#150e28]" value="">
+													Select your category
 												</option>
-												<option className="text-black" value="entertainment">
+												<option
+													className="text-white bg-[#150e28]"
+													value="entertainment"
+												>
 													Business
 												</option>
-												<option className="text-black" value="technology">
+												<option
+													className="text-white bg-[#150e28]"
+													value="technology"
+												>
 													Technology
 												</option>
 											</select>
@@ -277,45 +265,41 @@ const Page = () => {
 										<div className="md:hidden flex flex-col flex-0 md:flex-1 space-y-1">
 											<label htmlFor="groupSize">Group Size</label>
 											<select
-												value={values.groupSize}
-												onChange={handleChange}
-												onBlur={handleBlur}
 												name="groupSize"
 												id="groupSize"
 												required
-												className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4"
+												className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
 											>
-												<option className="text-black" value="">
+												<option className="text-white bg-[#150e28]" value="">
 													Select
 												</option>
-												<option className="text-black" value="1-5">
+												<option className="text-white bg-[#150e28]" value="1-5">
 													1-5
 												</option>
-												<option className="text-black" value="6-20">
+												<option
+													className="text-white bg-[#150e28]"
+													value="6-20"
+												>
 													6-20
 												</option>
 											</select>
 										</div>
 									</div>
-
 									<div className="hidden md:flex flex-col space-y-1">
 										<label htmlFor="groupSize">Group Size</label>
 										<select
-											value={values.groupSize}
-											onChange={handleChange}
-											onBlur={handleBlur}
 											name="groupSize"
 											id="groupSize"
 											required
-											className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4"
+											className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
 										>
-											<option className="text-black" value="">
+											<option className="text-white bg-[#150e28]" value="">
 												Select
 											</option>
-											<option className="text-black" value="1-5">
+											<option className="text-white bg-[#150e28]" value="1-5">
 												1-5
 											</option>
-											<option className="text-black" value="6-20">
+											<option className="text-white bg-[#150e28]" value="6-20">
 												6-20
 											</option>
 										</select>
@@ -326,13 +310,13 @@ const Page = () => {
 									Please review your registration details before submitting
 								</p>
 
-								<div className="flex gap-2">
+								<div className="flex gap-1">
 									<input
 										type="checkbox"
 										name="privacyPolicy"
 										required
 										id="privacyPolicy"
-										className="bg-transparent cursor-pointer"
+										className="bg-transparent cursor-pointer w-4 accent-[#150e28]"
 									/>
 									<p className="text-xs">
 										I agreed with the event terms and conditions and privacy

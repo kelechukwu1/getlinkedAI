@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 
@@ -12,8 +12,12 @@ import stargray from "../../../public/stargray.png";
 import sataGra from "../../../public/sata gra.png";
 
 const Page = () => {
-  const infoRef = useRef();
-  const formRef = useRef();
+  const infoRef = useRef(null);
+  const formRef = useRef(null);
+
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const info = infoRef.current;
@@ -46,6 +50,10 @@ const Page = () => {
         });
     });
   }, []);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <main className=" w-[80%] mx-auto md:mt-10">
@@ -111,16 +119,19 @@ const Page = () => {
             action=""
             method="post"
             className="flex flex-col gap-y-5 md:mt-8 relative"
+            onSubmit={submitHandler}
           >
             <input
               type="text"
+              required
               placeholder="First Name"
-              className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white"
+              className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white text-white focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
             />
             <input
               type="email"
+              required
               placeholder="Email"
-              className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white"
+              className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white  text-white focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
             />
 
             <textarea
@@ -129,7 +140,8 @@ const Page = () => {
               cols="30"
               rows="5"
               placeholder="Message"
-              className="w-full rounded-md pl-7 pt-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)]"
+              required
+              className="w-full rounded-md pl-7 pt-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white text-white focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none resize-none"
             />
 
             <div className="flex justify-center mt-7 mb-4">

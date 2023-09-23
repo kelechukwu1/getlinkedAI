@@ -208,6 +208,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-// onClick={() => {
-// 	setOpen(!open);
-// }}
