@@ -118,6 +118,7 @@ const Faq = () => {
 									src={"/questionMark.png"}
 									height={20}
 									width={20}
+									alt=""
 									className="relative top-[0.5rem] left-[-8rem] md:top-[-1rem] md:left-[1rem] lg:left-[-3rem] lg:top-[1rem]"
 								/>
 							</div>
@@ -126,6 +127,7 @@ const Faq = () => {
 									src={"/questionMark.png"}
 									height={30}
 									width={30}
+									alt=""
 									className="relative top-[-1rem] md:top-[-3rem] md:left-[6rem] left-[-3rem] lg:top-[-2rem] lg:left-[4rem]"
 								/>
 							</div>
@@ -134,6 +136,7 @@ const Faq = () => {
 									src={"/questionMark.png"}
 									height={20}
 									width={20}
+									alt=""
 									className="relative top-[0.5rem] right-[-2rem] md:top-[-1rem] md:left-[11rem] lg:left-[11rem] lg:top-[1rem]"
 								/>
 							</div>
