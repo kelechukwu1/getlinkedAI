@@ -147,7 +147,7 @@ const Landing = () => {
 				{/* mobile screen design */}
 				<div className="md:hidden">
 					<div>
-						<div className="flex md:justify-end md:mr-28 py-6 px-7 text-xl font-bold">
+						<div className="flex py-6 px-7 text-xl font-bold">
 							Igniting a Revolution in HR Innovation
 						</div>
 						<div className="absolute">

@@ -8,26 +8,26 @@ const Footer = () => {
 	return (
 		<div className="relative">
 			{/* background stars and frames */}
-			<div className="absolute top-[49rem] left-[7rem]">
+			<div className="absolute top-[49rem] left-[7rem] md:top-[45rem] md:left-[25rem] lg:left-[39rem] lg:top-[25rem]">
 				<Image src={"/star pu.png"} width={15} height={15} alt="star image" />
 			</div>
-			<div className="absolute top-[8.5rem] left-[1rem]">
+			<div className="absolute top-[8.5rem] md:top-[4rem] md:left-[5rem] left-[1rem]">
 				<Image src={"/star.png"} width={12} height={12} alt="star image" />
 			</div>
-			<div className="absolute top-[46rem] left-[20rem]">
+			<div className="absolute top-[46rem] left-[20rem] md:left-[40rem] md:top-[39rem] lg:top-[13rem] lg:left-[73rem]">
 				<Image src={"/star.png"} width={12} height={12} alt="star image" />
 			</div>
-			<div className="absolute top-[29rem] left-[11rem]">
+			<div className="absolute top-[29rem] md:top-[24rem] md:left-[25rem] lg:left-[56rem] lg:top-[3rem] left-[11rem]">
 				<Image src={"/stargray.png"} width={15} height={15} alt="star image" />
 			</div>
 			{/* background stars and frames end here*/}
-			<div className=" bg-custom-color2 text-white">
+			<div className="text-white bg-custom-color2">
 				<div className="mx-10 md:mx-40 mt-[10rem] py-10">
 					<div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16 justify-evenly">
 						<div className="">
 							<div className="mb-5">
-								<span className="text-white font-bold text-2xl">get</span>
-								<span className="text-color-2 font-bold text-2xl">linked</span>
+								<span className="text-2xl font-bold text-white">get</span>
+								<span className="text-2xl font-bold text-color-2">linked</span>
 							</div>
 							<div>
 								Getlinked Tech Hackathon is a technology innovation program
@@ -35,7 +35,7 @@ const Footer = () => {
 								showcasing young and talented individuals in the field of
 								technology
 							</div>
-							<div className="flex justify-center lg:justify-start md:mt-20 space-x-5 items-center my-10">
+							<div className="flex items-center justify-center my-10 space-x-5 lg:justify-start md:mt-20">
 								<div className="w-[1/2] p-2">Terms of Use</div>
 								<div className="border-[1px] border-purple-600 h-5"></div>
 								<div className="w-[1/2] p-2">Privacy Policy</div>
@@ -45,7 +45,7 @@ const Footer = () => {
 						<div className="md:flex">
 							<div className="md:ml-10">
 								<div className="space-y-6">
-									<div className="text-color-2 font-bold text-xl">
+									<div className="text-xl font-bold text-color-2">
 										Useful Links
 									</div>
 									<div>
@@ -67,8 +67,8 @@ const Footer = () => {
 								</div>
 							</div>
 							<div className="md:ml-10">
-								<div className="space-y-5 mt-5 md:mt-0">
-									<div className="text-color-2 font-bold text-xl">
+								<div className="mt-5 space-y-5 md:mt-0">
+									<div className="text-xl font-bold text-color-2">
 										Contact Us
 									</div>
 									<div className="flex items-center">
@@ -92,7 +92,7 @@ const Footer = () => {
 						</div>
 					</div>
 
-					<div className="text-center my-5">
+					<div className="my-5 text-center">
 						All rights reserved.©getlinked Ltd.
 					</div>
 				</div>

@@ -35,7 +35,7 @@ export default function Home() {
 			<Sponsor />
 			<hr className="border-t-1 border-gray-500" />
 			{/* privacy and policy section */}
-			{/* <Privacy /> */}
+			<Privacy />
 		</main>
 	);
 }
