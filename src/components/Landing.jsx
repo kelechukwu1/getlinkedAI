@@ -25,6 +25,25 @@ const Landing = () => {
 							/>
 						</div>
 					</div>
+  return (
+    <>
+      <div>
+        {/* medium and desktop design */}
+        <div className="hidden md:block">
+          <div className="w-full flex flex-col items-end">
+            <div className="py-6 px-7 text-xl font-bold">
+              Igniting a Revolution in HR Innovation
+            </div>
+            <div className="md:mt-[-1.5rem] md:mr-[1.7rem]">
+              <Image
+                src="/Vector 4.png"
+                width={100}
+                height={100}
+                alt="pink line"
+                className="md:w-[8.5rem] lg:w-[8.8rem]"
+              />
+            </div>
+          </div>
 
 					{/* background beautifications */}
 					<div className="">
