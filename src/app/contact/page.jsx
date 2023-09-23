@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 
@@ -15,9 +15,9 @@ const Page = () => {
   const infoRef = useRef(null);
   const formRef = useRef(null);
 
-  const firstNameRef = useRef(null);
-  const emailRef = useRef(null);
-  const messageRef = useRef(null);
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const info = infoRef.current;
@@ -53,8 +53,6 @@ const Page = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    firstNameRef.current.focus();
   };
 
   return (
@@ -126,14 +124,12 @@ const Page = () => {
             <input
               type="text"
               required
-              ref={firstNameRef}
               placeholder="First Name"
               className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white"
             />
             <input
               type="email"
               required
-              ref={emailRef}
               placeholder="Email"
               className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white"
             />
@@ -145,7 +141,6 @@ const Page = () => {
               rows="5"
               placeholder="Message"
               required
-              ref={messageRef}
               className="w-full rounded-md pl-7 pt-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)]"
             />
 
