@@ -1,9 +1,12 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useFormik } from "formik";
 import { contactSchema } from "@/schemas/schema";
+import { useDispatch } from "react-redux";
+import { newUser } from "@/store";
+// import POST from "../api/routeHandler/route";
 
 import Socials from "@/components/Socials";
 import BackHome from "@/components/BackHome";
@@ -16,10 +19,12 @@ import sataGra from "../../../public/sata gra.png";
 const Page = () => {
 	const infoRef = useRef(null);
 	const formRef = useRef(null);
+	const dispatch = useDispatch();
+	// const user = useSelector((state) => state.user.value);
 
-	// const [firstName, setFirstName] = useState("");
-	// const [email, setEmail] = useState("");
-	// const [message, setMessage] = useState("");
+	// const handlePost = () => {
+	// 	POST();
+	// };
 
 	//using formik to get form values and yup for validation
 	const {
@@ -42,10 +47,10 @@ const Page = () => {
 		//form submit
 		onSubmit: (values, actions) => {
 			actions.resetForm();
-			console.log(values);
-			alert(JSON.stringify(values));
-
-			setOpenModal(true);
+			// console.log(values);
+			dispatch(newUser(values));
+			// handlePost();
+			// setOpenModal(true);
 		},
 	});
 	console.log(errors);
