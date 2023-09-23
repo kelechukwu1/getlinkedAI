@@ -1,4 +1,5 @@
 "use client";
+import { useSelector } from "react-redux";
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
@@ -21,7 +22,8 @@ const Page = () => {
 
 	const formCardRef = useRef();
 	const imageRef = useRef();
-
+	const user = useSelector((state) => state.user);
+	console.log(user);
 	// const submitHandler = (e) => {
 	// 	e.preventDefault();
 
