@@ -32,4 +32,9 @@ body {
 	.blur {
 		filter: blur(8px); /* Adjust the blur intensity as needed */
 	}
+	/* Custom gradient border class */
+	.gradient-border {
+		border-image: linear-gradient(to bottom, #ff26b9, #903aff);
+		border-image-slice: 1;
+	}
 }
