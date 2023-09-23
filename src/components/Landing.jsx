@@ -124,7 +124,7 @@ const Landing = () => {
             <div className="flex flex-col md:flex-1 items-center">
               <div className="mr-5 z-10">
                 <Image
-                  src="/image 1.png"
+                  src="/Image 1.png"
                   width={500}
                   height={500}
                   alt="virtual reality"
@@ -259,7 +259,7 @@ const Landing = () => {
 
               <div className="md:hidden absolute md:top-[10rem] md:left-[45rem]">
                 <Image
-                  src="/image 1.png"
+                  src="/Image 1.png"
                   width={350}
                   height={350}
                   alt="virtual reality"
