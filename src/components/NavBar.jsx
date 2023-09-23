@@ -93,7 +93,9 @@ const NavBar = () => {
                 </div>
               </div>
               <div className=" md:ml-5 lg:ml-20">
-                <Button text={"register"} />
+                <Link href="/register">
+                  <Button text={"register"} />
+                </Link>
               </div>
             </div>
           </div>
@@ -174,7 +176,9 @@ const NavBar = () => {
                   </Link>
                 ))}
                 <div className="mx-5 py-9">
-                  <Button text={"register"} />
+                  <Link href="/register">
+                    <Button text={"register"} />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -187,6 +191,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-// onClick={() => {
-// 	setOpen(!open);
-// }}

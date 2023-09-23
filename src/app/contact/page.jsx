@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 
@@ -12,8 +12,12 @@ import stargray from "../../../public/stargray.png";
 import sataGra from "../../../public/sata gra.png";
 
 const Page = () => {
-  const infoRef = useRef();
-  const formRef = useRef();
+  const infoRef = useRef(null);
+  const formRef = useRef(null);
+
+  const firstNameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
 
   useEffect(() => {
     const info = infoRef.current;
@@ -46,6 +50,12 @@ const Page = () => {
         });
     });
   }, []);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    firstNameRef.current.focus();
+  };
 
   return (
     <main className=" w-[80%] mx-auto md:mt-10">
@@ -111,14 +121,19 @@ const Page = () => {
             action=""
             method="post"
             className="flex flex-col gap-y-5 md:mt-8 relative"
+            onSubmit={submitHandler}
           >
             <input
               type="text"
+              required
+              ref={firstNameRef}
               placeholder="First Name"
               className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white"
             />
             <input
               type="email"
+              required
+              ref={emailRef}
               placeholder="Email"
               className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white"
             />
@@ -129,6 +144,8 @@ const Page = () => {
               cols="30"
               rows="5"
               placeholder="Message"
+              required
+              ref={messageRef}
               className="w-full rounded-md pl-7 pt-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)]"
             />
 

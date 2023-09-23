@@ -16,6 +16,7 @@ import Button from "@/components/Button";
 
 const Page = () => {
   const [openModal, setOpenModal] = useState(false);
+
   const formCardRef = useRef();
   const imageRef = useRef();
 
