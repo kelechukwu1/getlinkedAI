@@ -6,48 +6,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Landing = () => {
-  const [countdownDate] = useState(new Date("2023-09-23T23:59:59").getTime());
-  const [timeRemaining, setTimeRemaining] = useState(
-    new Date().getTime() - countdownDate
-  );
-
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      // const timeRemaining = countdownDate - now;
-
-      const hours = String(
-        Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      ).padStart(2, "0");
-      const minutes = String(
-        Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60))
-      ).padStart(2, "0");
-      const seconds = String(
-        Math.floor((timeRemaining % (1000 * 60)) / 1000)
-      ).padStart(2, "0");
-
-      setTimeRemaining(timeRemaining);
-      setHours(hours);
-      setMinutes(minutes);
-      setSeconds(seconds);
-
-      if (timeRemaining <= 0) {
-        clearInterval(interval);
-        setHours(0);
-        setMinutes(0);
-        setSeconds(0);
-      }
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
   return (
     <>
       <div>
@@ -149,15 +107,15 @@ const Landing = () => {
               </div>
               <div className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-2 gap-4">
                 <div className="text-6xl">
-                  {hours}
+                  00
                   <span className="text-sm">H</span>
                 </div>
                 <div className="text-6xl">
-                  {minutes}
+                  00
                   <span className="text-sm">M</span>
                 </div>
                 <div className="text-6xl">
-                  {seconds}
+                  00
                   <span className="text-sm">S</span>
                 </div>
               </div>
@@ -286,15 +244,15 @@ const Landing = () => {
               </div>
               <div className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-10 gap-4">
                 <div className="text-6xl">
-                  {hours}
+                  00
                   <span className="text-sm">H</span>
                 </div>
                 <div className="text-6xl">
-                  {minutes}
+                  00
                   <span className="text-sm">M</span>
                 </div>
                 <div className="text-6xl">
-                  {seconds}
+                  00
                   <span className="text-sm">S</span>
                 </div>
               </div>
