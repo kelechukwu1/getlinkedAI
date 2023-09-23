@@ -234,7 +234,7 @@ const Landing = () => {
 							</div>
 
 							<div className="text-center px-16 md:px-0 mt-2 md:text-start md:mr-[6rem]">
-								Participate in getlinked tech Hackathon 2023 stand a chance to
+								Participat in getlinked tech Hackathon 2023 stand a chance to
 								win a Big prize
 							</div>
 							<div className="text-center mt-10 justify-center md:text-start z-10 relative">
