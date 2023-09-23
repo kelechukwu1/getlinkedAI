@@ -17,7 +17,7 @@ const Landing = () => {
             </div>
             <div className="md:mt-[-1.5rem] md:mr-[1.7rem]">
               <Image
-                src="/vector 4.png"
+                src="/Vector 4.png"
                 width={100}
                 height={100}
                 alt="pink line"
