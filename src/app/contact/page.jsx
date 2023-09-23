@@ -125,13 +125,13 @@ const Page = () => {
               type="text"
               required
               placeholder="First Name"
-              className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white"
+              className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white text-white focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
             />
             <input
               type="email"
               required
               placeholder="Email"
-              className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)] text-white"
+              className="w-full h-[47px] rounded-md pl-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white  text-white focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
             />
 
             <textarea
@@ -141,7 +141,7 @@ const Page = () => {
               rows="5"
               placeholder="Message"
               required
-              className="w-full rounded-md pl-7 pt-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white text-white drop-shadow-[0px_4px_4px_0px rgba(0, 0, 0, 0.25)]"
+              className="w-full rounded-md pl-7 pt-7 border border-[rgba(255, 255, 255, 1)] bg-transparent placeholder:text-white text-white focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none resize-none"
             />
 
             <div className="flex justify-center mt-7 mb-4">
