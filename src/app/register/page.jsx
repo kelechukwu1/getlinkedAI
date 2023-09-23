@@ -22,7 +22,7 @@ const Page = () => {
   const formCardRef = useRef();
   const imageRef = useRef();
   // const user = useSelector((state) => state.user);
-  console.log(user);
+  // console.log(user);
 
   //using formik to get form values and yup for validation
   const { touched, handleBlur, handleChange, handleSubmit, values, errors } =
