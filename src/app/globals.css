@@ -5,32 +5,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700&display=swap");
 
 :root {
-  font-family: "Montserrat", sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 body {
-  background-color: rgba(21, 14, 40, 1);
-  font-family: "Montserrat", sans-serif;
+	background-color: rgba(21, 14, 40, 1);
+	font-family: "Montserrat", sans-serif;
 }
 
 @layer utilities {
-  .bg-custom-color {
-    background-color: rgba(21, 14, 40, 1);
-  }
-
-  .primary-color {
-    background: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
-  }
-  .text-color-1 {
-    color: rgba(144, 58, 255, 1);
-  }
-  .text-color-2 {
-    color: rgba(212, 52, 254, 1);
-  }
-  .bg-custom-color2 {
-    background-color: rgb(16, 9, 34);
-  }
-  .blur {
-    filter: blur(8px); /* Adjust the blur intensity as needed */
-  }
+	.bg-custom-color {
+		background-color: rgba(21, 14, 40, 1);
+	}
+	.primary-color {
+		background: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+	}
+	.text-color-1 {
+		color: rgba(144, 58, 255, 1);
+	}
+	.text-color-2 {
+		color: rgba(212, 52, 254, 1);
+	}
+	.bg-custom-color2 {
+		background-color: rgb(16, 9, 34);
+	}
+	.blur {
+		filter: blur(8px); /* Adjust the blur intensity as needed */
+	}
+	/* Custom gradient border class */
+	.gradient-border {
+		border-image: linear-gradient(to bottom, #ff26b9, #903aff);
+		border-image-slice: 1;
+	}
 }

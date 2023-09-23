@@ -1,6 +1,45 @@
 import Image from "next/image";
 import Button from "./Button";
 const Judging = () => {
+	// <div className="md:ml-28">
+	// 	<div className=" justify-center">
+	// 		<div className="py-3 mt-10 text-6xl md:text-5xl font-bold">
+	// 			getlinkedTech
+	// 		</div>
+	// 		<div className="flex text-6xl md:text-5xl font-bold items-center">
+	// 			<div className="">Hackathon</div>
+
+	// 			<div className="text-color-2">1.0</div>
+	// 			<div>
+	// 				<Image src={"/chain.png"} width={50} height={50} alt="chain" />
+	// 			</div>
+	// 			<div>
+	// 				<Image src={"/banger.png"} width={50} height={50} alt="banger" />
+	// 			</div>
+	// 		</div>
+	// 	</div>
+
+	// 	<div className="text-center mt-2 md:text-start md:pr-[5rem]">
+	// 		Participate in getlinked tech Hackathon 2023 stand a chance to win a Big
+	// 		prize
+	// 	</div>
+	// 	<div className="relative z-10 justify-center mt-10 text-center md:text-start">
+	// 		<Link href={"/register"}>
+	// 			<Button text={"Register"} />
+	// 		</Link>
+	// 	</div>
+	// 	<div className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-2 gap-4">
+	// 		<div className="text-6xl">
+	// 			00<span className="text-sm">H</span>
+	// 		</div>
+	// 		<div className="text-6xl">
+	// 			00<span className="text-sm">M</span>
+	// 		</div>
+	// 		<div className="text-6xl">
+	// 			00<span className="text-sm">S</span>
+	// 		</div>
+	// 	</div>
+	// </div>;
 	return (
 		<>
 			<div className="relative gap-10 mx-10 my-20 text-white md:grid md:grid-cols-2 lg:mx-20 md:justify-center md:items-center md:my-24">
