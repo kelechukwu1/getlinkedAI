@@ -87,13 +87,13 @@ const Rules = () => {
             <div className="text-2xl font-bold text-color-2">Guidelines</div>
           </div>
           <div className="md:pl-32">
-            Rules and Guidelines Our tech hackathon is a melting pot of
+            {`Rules and Guidelines Our tech hackathon is a melting pot of
             visionaries, and its purpose is as clear as day: to shape the
             future. Whether you're a coding genius, a design maverick, or a
             concept wizard, you'll have the chance to transform your ideas into
             reality. Solving real-world problems, pushing the boundaries of
             technology, and creating solutions that can change the world, that's
-            what we're all about!
+            what we're all about!`}
           </div>
         </div>
         <div className="flex justify-center md:hidden md:ml-10 md:w-full">
@@ -110,13 +110,13 @@ const Rules = () => {
             <div className="text-2xl font-bold text-color-2">Guidelines</div>
           </div>
           <div className="md:pr-32 invisible" id="ruleText">
-            Rules and Guidelines Our tech hackathon is a melting pot of
+            {`Rules and Guidelines Our tech hackathon is a melting pot of
             visionaries, and its purpose is as clear as day: to shape the
             future. Whether you're a coding genius, a design maverick, or a
             concept wizard, you'll have the chance to transform your ideas into
             reality. Solving real-world problems, pushing the boundaries of
             technology, and creating solutions that can change the world, that's
-            what we're all about!
+            what we're all about!`}
           </div>
         </div>
         <div

@@ -21,12 +21,8 @@ const Page = () => {
 
 	const formCardRef = useRef();
 	const imageRef = useRef();
-
-	// const submitHandler = (e) => {
-	// 	e.preventDefault();
-
-	// 	setOpenModal(true);
-	// };
+	const user = useSelector((state) => state.user);
+	console.log(user);
 
 	//using formik to get form values and yup for validation
 	const { touched, handleBlur, handleChange, handleSubmit, values, errors } =
@@ -53,12 +49,6 @@ const Page = () => {
 			},
 		});
 	console.log(errors);
-	// if (isValid) {
-	// 	dispatch(addUser({ ...values, id: id }));
-	// 	navigate("/selectOutbound");
-	// } else {
-	// 	console.log("err");
-	// }
 
 	useEffect(() => {
 		const image = imageRef.current;
@@ -276,7 +266,7 @@ const Page = () => {
 												name="category"
 												id="category"
 												required
-												className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-3 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
+												className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-3 text-sm md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
 											>
 												<option className="text-white bg-[#150e28]" value="">
 													Select your category
@@ -329,6 +319,7 @@ const Page = () => {
 											)}
 										</div>
 									</div>
+
 									<div className="hidden md:flex flex-col space-y-1">
 										<label htmlFor="groupSize">Group Size</label>
 										<select

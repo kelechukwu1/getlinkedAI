@@ -49,8 +49,8 @@ const Privacy = () => {
 							Last updated on september 12, 2023
 						</div>
 						<div className="mb-5 mt-7">
-							Below are our privacy & policy, which outline a lot of goodies.
-							It's our aim to always take of our participant.
+							{`Below are our privacy & policy, which outline a lot of goodies.
+							It's our aim to always take of our participant.`}
 						</div>
 					</div>
 					<div className="justify-center pb-10 border-2 border-purple-500 rounded-lg lg:pt-5 lg:px-5">

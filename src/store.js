@@ -21,8 +21,10 @@ export const userSlice = createSlice({
 		newUser: (state, action) => {
 			//set the state to action.payload
 			state.user = action.payload;
+			console.log(state.user);
 			localStorage.setItem("user", JSON.stringify(action.payload));
 		},
 	},
 });
+
 export const { newUser } = userSlice.actions;
