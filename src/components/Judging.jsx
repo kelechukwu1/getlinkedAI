@@ -3,49 +3,58 @@ import Button from "./Button";
 const Judging = () => {
 	return (
 		<>
-			<div className="md:flex mx-10 my-20 text-white  lg:mx-20 md:justify-center md:items-center md:my-24 relative">
+			<div className="relative gap-10 mx-10 my-20 text-white md:grid md:grid-cols-2 lg:mx-20 md:justify-center md:items-center md:my-24">
 				{/* background beautifications */}
-				<div className="absolute blur top-[6rem] md:top-[20rem] left-[-5rem] opacity-50 z-10">
+				<div className="absolute">
 					<Image
 						src="/purpleLens.png"
 						width={500}
 						height={500}
 						alt="purple frame"
+						className="relative blur top-[9rem] left-[-6rem] opacity-30"
+					/>
+				</div>
+				<div className="absolute top-[-1rem] left-[3rem] md:top-[12rem] md:left-[3.5rem] lg:top-[5rem] lg:left-[7.5rem] z-0">
+					<Image
+						src={"/headCircle.png"}
+						width={70}
+						height={70}
+						alt="star image"
 					/>
 				</div>
 
-				<div className="absolute">
-					<div className="relative top-[-3rem] md:top[-3rem] md:left-[-25rem] left-[9rem]">
-						<Image
-							src={"/star pu.png"}
-							width={20}
-							height={20}
-							alt="star image"
-						/>
-					</div>
-					<div className=" md:hidden relative top-[8rem] left-[11rem]">
-						<Image
-							src={"/stargray.png"}
-							width={15}
-							height={15}
-							alt="star image"
-						/>
-					</div>
-					<div className="md:hidden relative top-[65rem] left-[17rem] z-10">
-						<Image src={"/star.png"} width={20} height={20} alt="star image" />
-					</div>
+				<div className="absolute top-[9rem] left-[12rem] md:top-[24rem] md:left-[12rem] lg:top-[21rem] lg:left-[19rem]">
+					<Image
+						src={"/stargray.png"}
+						width={20}
+						height={20}
+						alt="star image"
+					/>
 				</div>
+				<div className="absolute top-[65rem]  md:top-[45rem] md:left-[25rem] left-[20rem] lg:top-[38rem] lg:left-[40rem] ">
+					<Image src={"/star.png"} width={20} height={20} alt="star image" />
+				</div>
+				<div className="absolute top-[-3rem] left-[5rem] md:top-[7rem] md:left-[5rem] lg:top-[2rem] lg:left-[8rem] ">
+					<Image
+						src={"/sata gra.png"}
+						width={20}
+						height={20}
+						alt="star image"
+					/>
+				</div>
+
 				{/* background beautification ends here */}
-				<div className="flex justify-center md:w-full z-0">
+
+				<div className="relative z-10 flex justify-center">
 					<Image src={"/judges.png"} width={500} height={500} alt="judges" />
 				</div>
-				<div className="md:mx-20 text-center my-5 justify-center items-center md:w-full md:text-start lg:pr-32">
+				<div className="items-center justify-center my-5 text-center md:text-start ">
 					<div className="text-2xl font-bold">
 						Judging Criteria{" "}
 						<span className="text-color-2">Key attributes</span>
 					</div>
 					<div className="mt-5 text-sm">
-						<span className="text-pink-500 font-bold">
+						<span className="font-bold text-pink-500">
 							Innovation and Creativity:
 						</span>
 						Evaluate the uniqueness and creativity of the solution. Consider
@@ -53,13 +62,13 @@ const Judging = () => {
 						introduces innovative features.
 					</div>
 					<div className="pt-5 text-sm">
-						<span className="text-pink-500 font-bold"> Functionality:</span>
+						<span className="font-bold text-pink-500"> Functionality:</span>
 						Assess how well the solution works. Does it perform its intended
 						functions effectively and without major issues? Judges would
 						consider the completeness and robustness of the solution.
 					</div>
 					<div className="mt-5 text-sm">
-						<span className="text-pink-500 font-bold">
+						<span className="font-bold text-pink-500">
 							{" "}
 							Impact and Relevance:
 						</span>
@@ -69,7 +78,7 @@ const Judging = () => {
 						or environmental benefits.
 					</div>
 					<div className="mt-5 text-sm">
-						<span className="text-pink-500 font-bold">
+						<span className="font-bold text-pink-500">
 							Technical Complexity:
 						</span>
 						Evaluate the technical sophistication of the solution. Judges would
@@ -77,7 +86,7 @@ const Judging = () => {
 						technologies or algorithms, and the scalability of the solution.
 					</div>
 					<div className="mt-5 text-sm">
-						<span className="text-pink-500 font-bold">
+						<span className="font-bold text-pink-500">
 							Adherence to Hackathon Rules:
 						</span>
 						Adherence to Hackathon Rules: Judges will Ensure that the team
@@ -86,16 +95,7 @@ const Judging = () => {
 						competition-specific requirements.
 					</div>
 
-					{/* <div className="absolute">
-						<Image
-							src="/purpleLens.png"
-							width={500}
-							height={500}
-							alt="reward cup"
-							className="relative top-[-15rem] left-[7rem] opacity-40"
-						/>
-					</div> */}
-					<div className="mt-10 relative z-10">
+					<div className="relative z-10 mt-10">
 						<Button text={"Read More"} />
 					</div>
 				</div>
