@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "./Button";
 import Link from "next/link";
+import BorderButton from "./Button";
 
 const Landing = () => {
 	return (
@@ -8,8 +9,8 @@ const Landing = () => {
 			<div>
 				{/* medium and desktop design */}
 				<div className="hidden md:block">
-					<div className="w-full flex flex-col items-end">
-						<div className="py-6 px-7 text-xl font-bold">
+					<div className="flex flex-col items-end w-full">
+						<div className="py-6 text-xl font-bold px-7">
 							Igniting a Revolution in HR Innovation
 						</div>
 						<div className="md:mt-[-1.5rem] md:mr-[1.7rem]">
@@ -22,6 +23,9 @@ const Landing = () => {
 							/>
 						</div>
 					</div>
+					{/* <div className="flex flex-col items-end w-full">
+						<Image src="/groupName.png" width={400} height={400} alt="text" />
+					</div> */}
 
 					{/* background beautifications */}
 					<div className="">
@@ -31,7 +35,7 @@ const Landing = () => {
 								width={500}
 								height={500}
 								alt="purple lens"
-								className="blur opacity-50 z-0"
+								className="z-0 opacity-50 blur"
 							/>
 						</div>
 
@@ -81,45 +85,52 @@ const Landing = () => {
 					{/* background styles ends here */}
 
 					{/* main content */}
-					<div className="md:flex text-white">
+					<div className="relative text-white md:flex">
 						<div className="md:ml-28">
 							<div className="flex justify-center md:justify-start">
-								<Image
-									src="/title.png"
-									width={300}
-									height={300}
-									alt="title"
-									className="md:w-[25rem] lg:w-[40rem]"
-								/>
+								<div className="py-3 mt-10 text-4xl font-bold text-center px-7">
+									getlinkedTech
+								</div>
+								<div className="text-4xl font-bold text-center px-7">
+									Hackathon <span className="text-color-2">1.0🔗💥</span>
+								</div>
 							</div>
 
-							{/* <div className="text-center py-3 px-7 text-4xl font-bold mt-10">
-				getlinkedTech
-			</div>
-			<div className="text-center px-7 text-4xl font-bold">
-				Hackathon <span className="text-color-2">1.0🔗💥</span>
-			</div> */}
+							{/* <Image
+								src="/bigTitle.png"
+								width={300}
+								height={300}
+								alt="title"
+								className="md:w-[25rem] lg:w-[40rem]"
+							/> */}
 							<div className="text-center mt-2 md:text-start md:mr-[10rem]">
 								Participate in getlinked tech Hackathon 2023 stand a chance to
 								win a Big prize
 							</div>
-							<div className="text-center mt-10 justify-center md:text-start z-10 relative">
+							<div className="relative z-10 justify-center mt-10 text-center md:text-start">
 								<Link href={"/register"}>
 									<Button text={"Register"} />
 								</Link>
 							</div>
-							<div className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-2">
-								<Image
-									src={"/time.png"}
-									width={300}
-									height={300}
-									alt="countdown time"
-								/>
+							<div className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-2 gap-4">
+								<div className="text-6xl">
+									00<span className="text-sm">H</span>
+								</div>
+								<div className="text-6xl">
+									00<span className="text-sm">M</span>
+								</div>
+								<div className="text-6xl">
+									00<span className="text-sm">S</span>
+								</div>
 							</div>
 						</div>
 
-						<div className="flex flex-col items-center">
-							<div className="mr-5 z-10">
+						<div className="absolute md:top-[-20rem] md:left-[30rem]">
+							<Image src={"/mann.png"} width={600} height={300} />
+						</div>
+
+						{/* <div className="flex flex-col items-center">
+							<div className="z-10 mr-5">
 								<Image
 									src="/image 1.png"
 									width={500}
@@ -129,17 +140,17 @@ const Landing = () => {
 								/>
 							</div>
 							<div className="lg:mt-[-22.5rem] md:mt-[-20rem]  lg:mr-5  top-[-10rem]">
-								<div className="md:flex justify-center">
+								<div className="justify-center md:flex">
 									<Image
 										src={"/man.png"}
 										width={500}
 										height={500}
 										alt="man in a virtual reality"
-										className="filter grayscale -hue-rotate-180 relative z-0"
+										className="relative z-0 filter grayscale -hue-rotate-180"
 									/>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 				{/* medium and desktop design ends here */}
@@ -147,7 +158,7 @@ const Landing = () => {
 				{/* mobile screen design */}
 				<div className="md:hidden">
 					<div>
-						<div className="flex py-6 px-7 text-xl font-bold">
+						<div className="flex py-6 text-xl font-bold px-7">
 							Igniting a Revolution in HR Innovation
 						</div>
 						<div className="absolute">
@@ -160,6 +171,9 @@ const Landing = () => {
 							/>
 						</div>
 					</div>
+					{/* <div className="flex flex-col items-end mx-7">
+						<Image src="/groupName.png" width={400} height={400} alt="text" />
+					</div> */}
 
 					{/* background beautifications */}
 					<div className="">
@@ -169,7 +183,7 @@ const Landing = () => {
 								width={500}
 								height={500}
 								alt="purple lens"
-								className="blur opacity-50 z-0"
+								className="z-0 opacity-50 blur"
 							/>
 						</div>
 
@@ -218,40 +232,50 @@ const Landing = () => {
 					</div>
 
 					{/* main content */}
-					<div className="md:flex text-white">
+
+					<div className="text-white md:flex">
 						<div className="md:ml-28">
-							<div className="flex justify-center md:justify-start">
-								<Image
+							<div className="">
+								<div className="py-3 mt-10 text-4xl font-bold text-center px-7">
+									getlinkedTech
+								</div>
+								<div className="text-4xl font-bold text-center px-7">
+									Hackathon <span className="text-color-2">1.0🔗💥</span>
+								</div>
+							</div>
+							{/* </div> */}
+							{/* <Image
 									src="/title.png"
 									width={300}
 									height={300}
 									alt="title"
 									className="md:w-[40rem]"
-								/>
-							</div>
+								/> */}
 
-							{/* <div className="text-center py-3 px-7 text-4xl font-bold mt-10">
-						getlinkedTech
-					</div>
-					<div className="text-center px-7 text-4xl font-bold">
-						Hackathon <span className="text-color-2">1.0🔗💥</span>
-					</div> */}
 							<div className="text-center px-16 md:px-0 mt-2 md:text-start md:mr-[6rem]">
 								Participate in getlinked tech Hackathon 2023 stand a chance to
 								win a Big prize
 							</div>
-							<div className="text-center mt-10 justify-center md:text-start z-10 relative">
+							<div className="relative z-10 justify-center mt-10 text-center md:text-start">
 								<Link href={"/register"}>
 									<Button text={"Register"} />
 								</Link>
 							</div>
-							<div className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-10">
-								<Image
-									src={"/time.png"}
-									width={300}
-									height={300}
-									alt="countdown time"
-								/>
+							{/* <div className="relative z-10 justify-center mt-10 text-center md:text-start">
+								<Link href={"/register"}>
+									<BorderButton text={"customized"} />
+								</Link>
+							</div> */}
+							<div className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-10 gap-4">
+								<div className="text-6xl">
+									00<span className="text-sm">H</span>
+								</div>
+								<div className="text-6xl">
+									00<span className="text-sm">M</span>
+								</div>
+								<div className="text-6xl">
+									00<span className="text-sm">S</span>
+								</div>
 							</div>
 
 							<div className="md:hidden absolute md:top-[10rem] md:left-[45rem]">
@@ -266,13 +290,13 @@ const Landing = () => {
 						</div>
 						<div className="mt-[1.7rem]">
 							<div className="md:hidden mt-5 md:mt-24 md:w-[60rem]">
-								<div className="md:flex justify-center">
+								<div className="justify-center md:flex">
 									<Image
 										src={"/man.png"}
 										width={500}
 										height={500}
 										alt="man in a virtual reality"
-										className="filter grayscale -hue-rotate-180 relative z-0"
+										className="relative z-0 filter grayscale -hue-rotate-180"
 									/>
 								</div>
 							</div>
@@ -296,7 +320,7 @@ export default Landing;
 						/>
 					</div>
 
-					<div className="hidden md:block absolute z-10">
+					<div className="absolute z-10 hidden md:block">
 						<Image
 							src="/image 1.png"
 							width={400}
@@ -306,8 +330,8 @@ export default Landing;
 						/>
 					</div>
 
-					<div className="mt-6 hidden md:block">
-						<div className="md:flex justify-center absolute">
+					<div className="hidden mt-6 md:block">
+						<div className="absolute justify-center md:flex">
 							<Image
 								src={"/man.png"}
 								width={510}
