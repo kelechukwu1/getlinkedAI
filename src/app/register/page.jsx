@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useFormik } from "formik";
-import { basicSchema } from "@/schemas/schema";
+import { registerSchema } from "@/schemas/schema";
 
 import graphicsDesginer from "../../../public/svg/3d-graphic-designer.svg";
 import movingLady from "../../../public/moving-lady.png";
@@ -22,11 +22,11 @@ const Page = () => {
 	const formCardRef = useRef();
 	const imageRef = useRef();
 
-	const submitHandler = (e) => {
-		e.preventDefault();
+	// const submitHandler = (e) => {
+	// 	e.preventDefault();
 
-		setOpenModal(true);
-	};
+	// 	setOpenModal(true);
+	// };
 
 	//using formik to get form values and yup for validation
 	const { touched, handleBlur, handleChange, handleSubmit, values, errors } =
@@ -41,18 +41,24 @@ const Page = () => {
 				privacyPolicy: 0,
 			},
 			//validations
-			validationSchema: basicSchema,
+			validationSchema: registerSchema,
 
 			//form submit
-			onSubmit: (values) => {
-				// if (isValid) {
-				// 	dispatch(addUser({ ...values, id: id }));
-				// 	navigate("/selectOutbound");
-				// } else {
-				// 	console.log("err");
-				// }
+			onSubmit: (values, actions) => {
+				actions.resetForm();
+				console.log(values);
+				alert(JSON.stringify(values));
+
+				setOpenModal(true);
 			},
 		});
+	console.log(errors);
+	// if (isValid) {
+	// 	dispatch(addUser({ ...values, id: id }));
+	// 	navigate("/selectOutbound");
+	// } else {
+	// 	console.log("err");
+	// }
 
 	useEffect(() => {
 		const image = imageRef.current;
@@ -197,48 +203,76 @@ const Page = () => {
 									<div className="space-y-2 col-span-1">
 										<label htmlFor="teamName">{"Team's Name"}</label>
 										<input
+											value={values.teamName}
+											onChange={handleChange}
+											onBlur={handleBlur}
 											type="text"
 											name="teamName"
 											required
 											placeholder="Enter the name of your group"
 											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent  text-white md:placeholder:text-xs xl:placeholder:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
 										/>
+										{errors.teamName && touched.teamName && (
+											<div className="text-red-500">{errors.teamName}</div>
+										)}
 									</div>
+
 									<div className="space-y-2 col-span-1">
 										<label htmlFor="phone">Phone</label>
 										<input
+											value={values.phone}
+											onChange={handleChange}
+											onBlur={handleBlur}
 											type="phone"
 											name="phone"
 											required
 											placeholder="Enter your phone number "
 											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent  text-white md:placeholder:text-xs xl:placeholder:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
 										/>
+										{errors.phone && touched.phone && (
+											<div className="text-red-500">{errors.phone}</div>
+										)}
 									</div>
 									<div className="space-y-2">
 										<label htmlFor="email">Email</label>
 										<input
+											value={values.email}
+											onChange={handleChange}
+											onBlur={handleBlur}
 											type="email"
 											name="email"
 											required
 											placeholder="Enter your email address "
 											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent text-white md:placeholder:text-xs xl:placeholder:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
 										/>
+										{errors.email && touched.email && (
+											<div className="text-red-500">{errors.email}</div>
+										)}
 									</div>
 									<div className="space-y-2">
 										<label htmlFor="projectTopic">Project Topic</label>
 										<input
+											value={values.projectTopic}
+											onChange={handleChange}
+											onBlur={handleBlur}
 											type="text"
 											name="projectTopic"
 											required
 											placeholder="What is your group project topic "
 											className="w-full h-[47px] rounded-md pl-7 md:pl-2 border-2 border-[rgba(255, 255, 255, 1)] bg-transparent text-white md:placeholder:text-xs xl:placeholder:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none"
 										/>
+										{errors.projectTopic && touched.projectTopic && (
+											<div className="text-red-500">{errors.projectTopic}</div>
+										)}
 									</div>
 
 									<div className="flex gap-8 md:gap-2">
 										<div className="flex flex-col flex-1 md:flex-0 space-y-1">
 											<label htmlFor="category">Category</label>
 											<select
+												value={values.category}
+												onChange={handleChange}
+												onBlur={handleBlur}
 												name="category"
 												id="category"
 												required
@@ -260,15 +294,22 @@ const Page = () => {
 													Technology
 												</option>
 											</select>
+											{errors.category && touched.category && (
+												<div className="text-red-500">{errors.category}</div>
+											)}
 										</div>
 
 										<div className="md:hidden flex flex-col flex-0 md:flex-1 space-y-1">
 											<label htmlFor="groupSize">Group Size</label>
 											<select
+												value={values.groupSize}
+												onChange={handleChange}
 												name="groupSize"
 												id="groupSize"
 												required
-												className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
+												className={`${
+													errors.groupSize ? "border-red-500" : ""
+												}"outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer`}
 											>
 												<option className="text-white bg-[#150e28]" value="">
 													Select
@@ -283,15 +324,25 @@ const Page = () => {
 													6-20
 												</option>
 											</select>
+											{errors.groupSize && touched.groupSize && (
+												<div className="text-red-500">{errors.groupSize}</div>
+											)}
 										</div>
 									</div>
 									<div className="hidden md:flex flex-col space-y-1">
 										<label htmlFor="groupSize">Group Size</label>
 										<select
+											value={values.groupSize}
+											placeholder={values.groupSize}
+											onChange={handleChange}
 											name="groupSize"
 											id="groupSize"
 											required
-											className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
+											className={`${
+												errors.groupSize && touched.groupSize
+													? "border-red-500 outline-white h-[2.7rem] rounded-md bg-transparent border-2 text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
+													: "outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
+											}`}
 										>
 											<option className="text-white bg-[#150e28]" value="">
 												Select
@@ -303,6 +354,9 @@ const Page = () => {
 												6-20
 											</option>
 										</select>
+										{errors.groupSize && touched.groupSize && (
+											<div className="text-red-500">{errors.groupSize}</div>
+										)}
 									</div>
 								</div>
 
@@ -312,6 +366,7 @@ const Page = () => {
 
 								<div className="flex gap-1">
 									<input
+										onChange={handleChange}
 										type="checkbox"
 										name="privacyPolicy"
 										required
@@ -323,6 +378,9 @@ const Page = () => {
 										policy
 									</p>
 								</div>
+								{errors.privacyPolicy && touched.privacyPolicy && (
+									<div className="text-red-500">{errors.privacyPolicy}</div>
+								)}
 
 								<div className="flex justify-center mt-5">
 									<Button
