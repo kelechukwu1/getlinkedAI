@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import { contactSchema } from "@/schemas/schema";
 import { useDispatch } from "react-redux";
 import { newUser } from "@/store";
-// import POST from "../api/routeHandler/route";
+import { useSelector } from "react-redux";
 
 import Socials from "@/components/Socials";
 import BackHome from "@/components/BackHome";
@@ -15,12 +15,12 @@ import Button from "@/components/Button";
 import star from "../../../public/star.png";
 import stargray from "../../../public/stargray.png";
 import sataGra from "../../../public/sata gra.png";
+export const user = useSelector((state) => state.user.value);
 
 const Page = () => {
 	const infoRef = useRef(null);
 	const formRef = useRef(null);
 	const dispatch = useDispatch();
-	// const user = useSelector((state) => state.user.value);
 
 	// const handlePost = () => {
 	// 	POST();
@@ -53,7 +53,13 @@ const Page = () => {
 			// setOpenModal(true);
 		},
 	});
-	console.log(errors);
+	// try {
+	//   	const user = useSelector((state) => state.user);
+	//   console.log(user);
+
+	// } catch (err) {
+	//   console.log(err.message)
+	// }
 
 	useEffect(() => {
 		const info = infoRef.current;

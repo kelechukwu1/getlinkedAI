@@ -41,7 +41,7 @@ const Privacy = () => {
 			<div className="gap-10 mx-10 text-white md:ml-20 my-28 md:grid md:grid-cols-2">
 				<div className="lg:text-start lg:w-full">
 					<div className="text-center lg:text-start">
-						<div my-5>
+						<div>
 							<div className="text-2xl font-bold">Privacy Policy and</div>
 							<span className="text-2xl font-bold text-color-2">Terms</span>
 						</div>

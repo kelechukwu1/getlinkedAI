@@ -1,8 +1,5 @@
-import { useSelector } from "react-redux";
-
-export default function POST() {
-	const user = useSelector((state) => state.user.value);
-
+import { user } from "@/app/contact/page";
+export default async function POST() {
 	console.log(user);
 	fetch("https://backend.getlinked.ai/hackathon/contact-form", {
 		method: "POST",
@@ -17,7 +14,6 @@ export default function POST() {
 	})
 		.then((response) => response.json())
 		.then((json) => {
-			// do something with json
 			console.log(json);
 		});
 	return NextResponse.json({ status: "success", data: data });
