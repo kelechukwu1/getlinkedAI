@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import { contactSchema } from "@/schemas/schema";
 import { useDispatch } from "react-redux";
 import { newUser } from "@/store";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 import Socials from "@/components/Socials";
 import BackHome from "@/components/BackHome";
@@ -15,7 +15,7 @@ import Button from "@/components/Button";
 import star from "../../../public/star.png";
 import stargray from "../../../public/stargray.png";
 import sataGra from "../../../public/sata gra.png";
-export const user = useSelector((state) => state.user.value);
+// export const user = useSelector((state) => state.user.value);
 
 const Page = () => {
 	const infoRef = useRef(null);
