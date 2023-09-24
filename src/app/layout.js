@@ -16,23 +16,23 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ children }) {
-  //redux store reducers
-  const store = configureStore({
-    reducer: {
-      user: userSlice.reducer,
-    },
-  });
+	//redux store reducers
+	const store = configureStore({
+		reducer: {
+			user: userSlice.reducer,
+		},
+	});
 
-  return (
-    <Provider store={store}>
-      <html lang="en">
-        <body className={inter.className}>
-          <NavBar />
-          {children}
-          {/* footer section */}
-          <Footer />
-        </body>
-      </html>
-    </Provider>
-  );
+	return (
+		<Provider store={store}>
+			<html lang="en">
+				<body className={inter.className}>
+					<NavBar />
+					{children}
+					{/* footer section */}
+					<Footer />
+				</body>
+			</html>
+		</Provider>
+	);
 }
