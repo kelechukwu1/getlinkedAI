@@ -88,7 +88,7 @@ const Landing = () => {
             <div className="md:pl-16 lg:ml-20 md:flex-1">
               <div className="flex justify-center md:justify-start">
                 <Image
-                  src="/title.png"
+                  src="/Title.png"
                   width={300}
                   height={300}
                   alt="title"
@@ -225,7 +225,7 @@ const Landing = () => {
             <div className="md:ml-28">
               <div className="flex justify-center md:justify-start">
                 <Image
-                  src="/title.png"
+                  src="/Title.png"
                   width={300}
                   height={300}
                   alt="title"
