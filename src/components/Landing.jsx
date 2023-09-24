@@ -83,6 +83,7 @@ const Landing = () => {
 					</div>
 					{/* background styles ends here */}
 
+
 					{/* main content */}
 					<div className="md:flex text-white">
 						<div className="md:pl-16 lg:ml-20 md:flex-1">
@@ -147,6 +148,7 @@ const Landing = () => {
 				</div>
 				{/* medium and desktop design ends here */}
 
+
 				{/* mobile screen design */}
 				<div className="md:hidden">
 					<div>
@@ -163,6 +165,7 @@ const Landing = () => {
 							/>
 						</div>
 					</div>
+
 
 					{/* background beautifications */}
 					<div className="">
@@ -220,6 +223,7 @@ const Landing = () => {
 						</div>
 					</div>
 
+
 					{/* main content */}
 					<div className="md:flex text-white">
 						<div className="md:ml-28">
@@ -257,6 +261,7 @@ const Landing = () => {
 									</div>
 								</div>
 							</div>
+
 
 							<div className="text-center px-12 md:px-0 mt-2 md:text-start md:mr-[6rem]">
 								Participat in getlinked tech Hackathon 2023 stand a chance to
