@@ -150,7 +150,7 @@ const Landing = () => {
 				{/* mobile screen design */}
 				<div className="md:hidden">
 					<div>
-						<div className="flex py-6 px-7 text-base md:text-xl font-bold">
+						<div className="flex py-6 text-[1.1rem] text-center justify-center font-bold">
 							Igniting a Revolution in HR Innovation
 						</div>
 						<div className="absolute">
@@ -159,14 +159,14 @@ const Landing = () => {
 								width={100}
 								height={100}
 								alt="pink line"
-								className="relative w-[8.5rem] top-[-1.5rem] md:left-[67rem] left-[4rem]"
+								className="relative w-[7rem] top-[-1.5rem] left-[14rem]"
 							/>
 						</div>
 					</div>
 
 					{/* background beautifications */}
 					<div className="">
-						<div className="absolute top-[4rem] md:top-[3rem] left-[-6rem] md:left-[-1rem]">
+						<div className="absolute top-[4rem] left-[-6rem]">
 							<Image
 								src="/purpleLens.png"
 								width={500}
@@ -176,7 +176,7 @@ const Landing = () => {
 							/>
 						</div>
 
-						<div className="absolute top-[8.5rem] md:top-[8.5rem] left-[9rem]  md:left-[11rem]">
+						<div className="absolute top-[8.5rem] left-[9rem]">
 							<Image
 								src={"/star.png"}
 								width={12}
@@ -185,7 +185,7 @@ const Landing = () => {
 							/>
 						</div>
 
-						<div className="md:hidden absolute md:top-[12rem] left-[22rem]">
+						<div className="absolute left-[22rem]">
 							<Image
 								src={"/stargray.png"}
 								width={8}
@@ -193,7 +193,7 @@ const Landing = () => {
 								alt="star image"
 							/>
 						</div>
-						<div className="hidden md:block absolute top-[8.5rem] md:top-[12rem] left-[22rem] md:left-[50rem]">
+						<div className="hidden absolute top-[8.5rem] left-[22rem]">
 							<Image
 								src={"/stargray.png"}
 								width={15}
@@ -223,26 +223,51 @@ const Landing = () => {
 					{/* main content */}
 					<div className="md:flex text-white">
 						<div className="md:ml-28">
-							<div className="flex justify-center md:justify-start">
-								<Image
-									src="/Title.png"
-									width={300}
-									height={300}
-									alt="title"
-									className="md:w-[40rem]"
-								/>
+							<div className="justify-center mt-5">
+								<div className="absolute">
+									<Image
+										src={"/Creative 1.png"}
+										width={20}
+										height={20}
+										alt="idea"
+										className="relative top-[-1.2rem] left-[17.3rem]"
+									/>
+								</div>
+								<div className="text-4xl font-bold flex justify-center">
+									getlinkedTech
+								</div>
+								<div className="flex items-center justify-center">
+									<div className="text-4xl font-bold">Hackathon</div>
+									<div className="text-4xl font-bold">1.0</div>
+									<div>
+										<Image
+											src={"/chain.png"}
+											width={40}
+											height={40}
+											alt="chain"
+										/>
+									</div>
+									<div>
+										<Image
+											src={"/banger.png"}
+											width={40}
+											height={40}
+											alt="banger"
+										/>
+									</div>
+								</div>
 							</div>
 
-							<div className="text-center px-16 md:px-0 mt-2 md:text-start md:mr-[6rem]">
+							<div className="text-center px-12 md:px-0 mt-2 md:text-start md:mr-[6rem]">
 								Participat in getlinked tech Hackathon 2023 stand a chance to
 								win a Big prize
 							</div>
-							<div className="text-center mt-10 justify-center md:text-start z-10 relative">
+							<div className="text-center mt-[1.6rem] justify-center md:text-start z-10 relative">
 								<Link href={"/register"}>
 									<Button text={"Register"} />
 								</Link>
 							</div>
-							<div className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-10 gap-4">
+							<div className="flex py-[1.6rem] justify-center text-center md:justify-normal gap-4">
 								<div className="text-6xl">
 									00
 									<span className="text-sm">H</span>
@@ -263,12 +288,12 @@ const Landing = () => {
 									width={350}
 									height={350}
 									alt="virtual reality"
-									className=" md:w-[27rem] md:h-[27rem] relative top-[1.7rem] left-[2.3rem] z-10"
+									className="relative top-[0.5rem] left-[2.3rem] z-10"
 								/>
 							</div>
 						</div>
 						<div className="mt-[1.7rem]">
-							<div className="md:hidden mt-5 md:mt-24 md:w-[60rem]">
+							<div className="mt-5">
 								<div className="flex justify-center">
 									<Image
 										src={"/man.png"}
