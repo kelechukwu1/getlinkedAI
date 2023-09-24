@@ -4,8 +4,19 @@ import Image from "next/image";
 import Button from "./Button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Landing = () => {
+	//aos useEffect hook
+	useEffect(() => {
+		AOS.init({
+			duration: 750,
+			offset: 0,
+			once: true,
+			anchorPlacement: "top-bottom",
+		});
+	}, []);
 	return (
 		<>
 			<div>
@@ -83,7 +94,6 @@ const Landing = () => {
 					</div>
 					{/* background styles ends here */}
 
-
 					{/* main content */}
 					<div className="md:flex text-white">
 						<div className="md:pl-16 lg:ml-20 md:flex-1">
@@ -148,14 +158,13 @@ const Landing = () => {
 				</div>
 				{/* medium and desktop design ends here */}
 
-
 				{/* mobile screen design */}
 				<div className="md:hidden">
 					<div>
 						<div className="flex py-6 text-[1.1rem] text-center justify-center font-bold">
 							Igniting a Revolution in HR Innovation
 						</div>
-						<div className="absolute">
+						<div data-aos="fade-left" className="absolute">
 							<Image
 								src="/Vector 4.png"
 								width={100}
@@ -165,7 +174,6 @@ const Landing = () => {
 							/>
 						</div>
 					</div>
-
 
 					{/* background beautifications */}
 					<div className="">
@@ -223,27 +231,33 @@ const Landing = () => {
 						</div>
 					</div>
 
-
 					{/* main content */}
 					<div className="md:flex text-white">
 						<div className="md:ml-28">
 							<div className="justify-center mt-5">
-								<div className="absolute">
+								<div data-aos="flip-left" className="absolute">
 									<Image
 										src={"/Creative 1.png"}
 										width={20}
 										height={20}
 										alt="idea"
-										className="relative top-[-1.2rem] left-[17.3rem]"
+										className="relative top-[-1.2rem] left-[17rem]"
 									/>
 								</div>
-								<div className="text-4xl font-bold flex justify-center">
+								<div
+									data-aos="fade-up-right"
+									className="text-4xl font-bold flex justify-center"
+								>
 									getlinkedTech
 								</div>
 								<div className="flex items-center justify-center">
-									<div className="text-4xl font-bold">Hackathon</div>
-									<div className="text-4xl font-bold">1.0</div>
-									<div>
+									<div data-aos="fade-up-right" className="text-4xl font-bold">
+										Hackathon
+									</div>
+									<div data-aos="fade-up-right" className="text-4xl font-bold">
+										1.0
+									</div>
+									<div data-aos="fade-up-left">
 										<Image
 											src={"/chain.png"}
 											width={40}
@@ -251,7 +265,7 @@ const Landing = () => {
 											alt="chain"
 										/>
 									</div>
-									<div>
+									<div data-aos="fade-up-left">
 										<Image
 											src={"/banger.png"}
 											width={40}
@@ -262,8 +276,7 @@ const Landing = () => {
 								</div>
 							</div>
 
-
-							<div className="text-center px-12 md:px-0 mt-2 md:text-start md:mr-[6rem]">
+							<div data-aos="fade-up" className="text-center px-10 mt-2">
 								Participat in getlinked tech Hackathon 2023 stand a chance to
 								win a Big prize
 							</div>
@@ -287,7 +300,10 @@ const Landing = () => {
 								</div>
 							</div>
 
-							<div className="md:hidden absolute md:top-[10rem] md:left-[45rem]">
+							<div
+								data-aos="fade-right"
+								className="md:hidden absolute md:top-[10rem] md:left-[45rem]"
+							>
 								<Image
 									src="/Image 1.png"
 									width={350}
@@ -297,7 +313,7 @@ const Landing = () => {
 								/>
 							</div>
 						</div>
-						<div className="mt-[1.7rem]">
+						<div data-aos="fade-left" className="mt-[1.7rem]">
 							<div className="mt-5">
 								<div className="flex justify-center">
 									<Image
