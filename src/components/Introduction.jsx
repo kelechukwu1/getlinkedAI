@@ -65,7 +65,7 @@ const Introduction = () => {
 
 			<div
 				data-aos="fade-right"
-				className="absolute top-[17rem] lg:top-[17rem] left-[12rem] lg:left-[29rem] md:left-[23rem] md:top-[17rem]"
+				className="absolute top-[16rem] lg:top-[17rem] left-[10rem] lg:left-[29rem] md:left-[23rem] md:top-[17rem]"
 			>
 				<Image src={"/arrow.png"} width={45} height={45} alt="star image" />
 			</div>
