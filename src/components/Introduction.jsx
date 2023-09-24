@@ -63,7 +63,10 @@ const Introduction = () => {
 				<Image src={"/star pu.png"} width={12} height={12} alt="star image" />
 			</div>
 
-			<div className="absolute top-[17rem] lg:top-[17rem] left-[12rem] lg:left-[29rem] md:left-[23rem] md:top-[17rem]">
+			<div
+				data-aos="fade-right"
+				className="absolute top-[17rem] lg:top-[17rem] left-[12rem] lg:left-[29rem] md:left-[23rem] md:top-[17rem]"
+			>
 				<Image src={"/arrow.png"} width={45} height={45} alt="star image" />
 			</div>
 
