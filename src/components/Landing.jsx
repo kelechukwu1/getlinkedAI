@@ -161,7 +161,10 @@ const Landing = () => {
 				{/* mobile screen design */}
 				<div className="md:hidden">
 					<div>
-						<div className="flex py-6 text-[1.1rem] text-center justify-center font-bold">
+						<div
+							data-aos="fade-right"
+							className="flex py-6 text-[1.1rem] text-center justify-center font-bold"
+						>
 							Igniting a Revolution in HR Innovation
 						</div>
 						<div data-aos="fade-left" className="absolute">
@@ -276,16 +279,27 @@ const Landing = () => {
 								</div>
 							</div>
 
-							<div data-aos="fade-up" className="text-center px-10 mt-2">
+							<div
+								data-aos="fade-up"
+								border-gray-500
+								border-t-1
+								className="text-center px-10 mt-2"
+							>
 								Participat in getlinked tech Hackathon 2023 stand a chance to
 								win a Big prize
 							</div>
-							<div className="text-center mt-[1.6rem] justify-center md:text-start z-10 relative">
+							<div
+								data-aos="fade-up"
+								className="text-center mt-[1.6rem] justify-center md:text-start z-10 relative"
+							>
 								<Link href={"/register"}>
 									<Button text={"Register"} />
 								</Link>
 							</div>
-							<div className="flex py-[1.6rem] justify-center text-center md:justify-normal gap-4">
+							<div
+								data-aos="fade-up"
+								className="flex py-[1.6rem] justify-center text-center md:justify-normal gap-4"
+							>
 								<div className="text-6xl">
 									00
 									<span className="text-sm">H</span>
@@ -302,7 +316,7 @@ const Landing = () => {
 
 							<div
 								data-aos="fade-right"
-								className="md:hidden absolute md:top-[10rem] md:left-[45rem]"
+								className="md:hidden absolute md:top-[10rem] md:left-[45rem] z-10"
 							>
 								<Image
 									src="/Image 1.png"
@@ -313,7 +327,7 @@ const Landing = () => {
 								/>
 							</div>
 						</div>
-						<div data-aos="fade-left" className="mt-[1.7rem]">
+						<div data-aos="fade-left" className="mt-[1.7rem] z-0">
 							<div className="mt-5">
 								<div className="flex justify-center">
 									<Image

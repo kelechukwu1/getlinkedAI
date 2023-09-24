@@ -1,7 +1,20 @@
+"use client";
 import Image from "next/image";
 import Button from "./Button";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Privacy = () => {
+	//aos useEffect hook
+	useEffect(() => {
+		AOS.init({
+			duration: 750,
+			offset: 0,
+			once: true,
+			anchorPlacement: "top-bottom",
+		});
+	}, []);
 	return (
 		<div className="relative">
 			{/* background stars and frames */}
@@ -42,19 +55,26 @@ const Privacy = () => {
 				<div className="lg:text-start lg:w-full">
 					<div className="text-center lg:text-start">
 						<div>
-							<div className="text-2xl font-bold">Privacy Policy and</div>
-							<span className="text-2xl font-bold text-color-2">Terms</span>
+							<div data-aos="fade-right" className="text-2xl font-bold">
+								Privacy Policy and
+							</div>
+							<span
+								data-aos="fade-left"
+								className="text-2xl font-bold text-color-2"
+							>
+								Terms
+							</span>
 						</div>
 						<div className="mt-2 text-gray-300">
 							Last updated on september 12, 2023
 						</div>
-						<div className="mb-5 mt-7">
+						<div data-aos="fade-up" className="mb-5 mt-7">
 							{`Below are our privacy & policy, which outline a lot of goodies.
 							It's our aim to always take of our participant.`}
 						</div>
 					</div>
 					<div className="justify-center pb-10 border-2 border-purple-500 rounded-lg lg:pt-5 lg:px-5">
-						<div className="m-5 text-center lg:text-start">
+						<div data-aos="fade-up" className="m-5 text-center lg:text-start">
 							At getlinked tech Hackathon 1.0, we value your privacy and are
 							committed to protecting your personal information. This Privacy
 							Policy outlines how we collect, use, discose, and safeguard your
@@ -63,14 +83,17 @@ const Privacy = () => {
 							in this policy.
 						</div>
 						<div className="m-5">
-							<div className="mt-4 font-semibold text-color-2">
+							<div
+								data-aos="fade-up"
+								className="mt-4 font-semibold text-color-2"
+							>
 								Licensing Policy
 							</div>
-							<div className="mt-1 mb-4">
+							<div data-aos="fade-up" className="mt-1 mb-4">
 								Here are terms of our Standard License:
 							</div>
 							<div className="flex">
-								<div className="mt-2 mr-2">
+								<div data-aos="fade-down" className="mt-2 mr-2">
 									<svg
 										width="17"
 										height="17"
@@ -86,14 +109,14 @@ const Privacy = () => {
 										/>
 									</svg>
 								</div>
-								<div>
+								<div data-aos="fade-up">
 									{" "}
 									The Standard License grants you a non-exclusive right to
 									navigate and register for our event.
 								</div>
 							</div>
 							<div className="flex">
-								<div className="mt-2 mr-2">
+								<div data-aos="fade-up" className="mt-2 mr-2">
 									<svg
 										width="17"
 										height="17"
@@ -109,19 +132,19 @@ const Privacy = () => {
 										/>
 									</svg>
 								</div>
-								<div>
+								<div data-aos="fade-up">
 									You are licensed to use the item available at any free sites,
 									for your project development.
 								</div>
 							</div>
-							<div className="flex justify-center mt-10">
+							<div data-aos="fade-up" className="flex justify-center mt-10">
 								<Button text={"Read More"} />
 							</div>
 						</div>
 					</div>
 				</div>
 				<div className="flex justify-center mt-10 md:pt-16 pb-10 md:pb-0 lg:mt-5 relative w-[1/2]">
-					<div className="relative z-10">
+					<div data-aos="fade-left" className="relative z-10">
 						<Image
 							src="/privacy.png"
 							width={300}
@@ -130,7 +153,10 @@ const Privacy = () => {
 							className="lg:h-[25rem]"
 						/>
 					</div>
-					<div className="absolute top-0 left-0 flex justify-center w-full h-full">
+					<div
+						data-aos="fade-right"
+						className="absolute top-0 left-0 flex justify-center w-full h-full"
+					>
 						<Image
 							src="/privacy1.png"
 							width={300}
