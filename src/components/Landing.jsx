@@ -19,7 +19,7 @@ const Landing = () => {
 	}, []);
 	return (
 		<>
-			<div>
+			<div className="overflow-x-hidden">
 				{/* medium and desktop design */}
 				<div className="hidden md:block">
 					<div className="w-full flex flex-col items-end">
@@ -179,6 +179,7 @@ const Landing = () => {
 					</div>
 
 					{/* background beautifications */}
+
 					<div className="">
 						<div className="absolute top-[4rem] left-[-6rem]">
 							<Image
@@ -236,6 +237,7 @@ const Landing = () => {
 
 					{/* main content */}
 					<div className="md:flex text-white">
+						{/* here */}
 						<div className="md:ml-28">
 							<div className="justify-center mt-5">
 								<div data-aos="flip-left" className="absolute">
@@ -314,19 +316,18 @@ const Landing = () => {
 								</div>
 							</div>
 
-							<div
-								data-aos="fade-right"
-								className="md:hidden absolute md:top-[10rem] md:left-[45rem] z-10"
-							>
+							<div data-aos="fade-right" className="absolute z-10">
 								<Image
 									src="/Image 1.png"
 									width={350}
 									height={350}
 									alt="virtual reality"
-									className="relative top-[0.5rem] left-[2.3rem] z-10"
+									className="relative top-[0.5rem] z-10"
 								/>
 							</div>
 						</div>
+
+						{/* here */}
 						<div data-aos="fade-left" className="mt-[1.7rem] z-0">
 							<div className="mt-5">
 								<div className="flex justify-center">

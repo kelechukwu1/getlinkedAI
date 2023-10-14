@@ -87,7 +87,7 @@ const Introduction = () => {
 					>
 						tech Hackathon1.0
 					</div>
-					<div data-aos="fade-up" className="lg:pr-32 md:pr-24" id="introText">
+					<div className="lg:pr-32 md:pr-24" id="introText">
 						{`Our tech hackathon is a melting pot of visionaries, and its purpose
 						is as clear as day, to shape the future. Whether you're a coding
 						genius, a design maverick, or a concept wizard, you'll have the
