@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Button from "./Button";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -19,14 +19,20 @@ const Landing = () => {
 	}, []);
 	return (
 		<>
-			<div className="overflow-x-hidden">
+			<div className="">
 				{/* medium and desktop design */}
 				<div className="hidden md:block">
 					<div className="w-full flex flex-col items-end">
-						<div className="py-6 px-7 text-xl font-bold">
+						<div
+							data-aos="fade-down-left"
+							className="py-6 px-7 text-xl font-bold"
+						>
 							Igniting a Revolution in HR Innovation
 						</div>
-						<div className="md:mt-[-1.5rem] md:mr-[1.7rem]">
+						<div
+							data-aos="fade-left"
+							className="md:mt-[-1.5rem] md:mr-[1.7rem]"
+						>
 							<Image
 								src="/Vector 4.png"
 								width={100}
@@ -97,26 +103,73 @@ const Landing = () => {
 					{/* main content */}
 					<div className="md:flex text-white">
 						<div className="md:pl-16 lg:ml-20 md:flex-1">
-							<div className="flex justify-center md:justify-start">
-								<Image
-									src="/Title.png"
-									width={300}
-									height={300}
-									alt="title"
-									className="md:w-[25rem] lg:w-[40rem]"
-								/>
+							<div className="justify-start mt-5">
+								<div data-aos="fade-down" className="absolute">
+									<Image
+										src={"/Creative 1.png"}
+										width={25}
+										height={25}
+										alt="idea"
+										className="relative md:top-[-1.5rem] lg:top-[-1.2rem] md:left-[17rem] lg:left-[21.5rem]"
+									/>
+								</div>
+								<div
+									data-aos="fade-up-right"
+									className="md:text-5xl lg:text-6xl font-bold flex justify-start"
+								>
+									getlinkedTech
+								</div>
+								<div className="flex items-center justify-start">
+									<div
+										data-aos="fade-up-right"
+										className="md:text-5xl lg:text-6xl font-bold"
+									>
+										Hackathon
+									</div>
+									<div
+										data-aos="fade-up-right"
+										className="md:text-5xl lg:text-6xl font-bold"
+									>
+										1.0
+									</div>
+									<div data-aos="fade-up-left">
+										<Image
+											src={"/chain.png"}
+											width={60}
+											height={60}
+											alt="chain"
+										/>
+									</div>
+									<div data-aos="fade-left">
+										<Image
+											src={"/banger.png"}
+											width={60}
+											height={60}
+											alt="banger"
+										/>
+									</div>
+								</div>
 							</div>
 
-							<div className="text-center mt-2 md:text-start md:mr-[5rem]">
+							<div
+								data-aos="fade-up-left"
+								className="mt-2 md:text-start md:mr-[5rem] lg:mr-[13rem]"
+							>
 								Participate in getlinked tech Hackathon 2023 stand a chance to
 								win a Big prize
 							</div>
-							<div className="text-center mt-10 justify-center md:text-start z-10 relative">
+							<div
+								data-aos="fade-up-left"
+								className="text-center mt-10 justify-center md:text-start z-10 relative"
+							>
 								<Link href={"/register"}>
 									<Button text={"Register"} />
 								</Link>
 							</div>
-							<div className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-2 gap-4">
+							<div
+								data-aos="fade-up-left"
+								className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-2 gap-4"
+							>
 								<div className="text-6xl">
 									00
 									<span className="text-sm">H</span>
@@ -133,7 +186,7 @@ const Landing = () => {
 						</div>
 
 						<div className="flex flex-col md:flex-1 items-center">
-							<div className="mr-5 z-10">
+							<div data-aos="fade-left" className="mr-5 z-10">
 								<Image
 									src="/Image 1.png"
 									width={500}
@@ -142,7 +195,10 @@ const Landing = () => {
 									className=" md:w-full md:h-[27rem] z-10 object-contain"
 								/>
 							</div>
-							<div className="lg:mt-[-22.5rem] md:mt-[-20rem]  lg:mr-5  top-[-10rem]">
+							<div
+								data-aos="fade-up"
+								className="lg:mt-[-22.5rem] md:mt-[-20rem]  lg:mr-5  top-[-10rem]"
+							>
 								<div className="md:flex justify-center">
 									<Image
 										src={"/man.png"}
@@ -237,7 +293,6 @@ const Landing = () => {
 
 					{/* main content */}
 					<div className="md:flex text-white">
-						{/* here */}
 						<div className="md:ml-28">
 							<div className="justify-center mt-5">
 								<div data-aos="flip-left" className="absolute">

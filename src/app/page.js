@@ -10,7 +10,7 @@ import Timeline from "@/components/Timeline";
 
 export default function Home() {
 	return (
-		<main className="text-white overflow-x-hidden">
+		<main className="text-white">
 			{/* Landing page */}
 			<Landing />
 			<hr className="border-gray-500 border-t-1" />

@@ -256,11 +256,14 @@ const Page = () => {
 										)}
 									</div>
 
-									{/* <div className="flex gap-8 md:gap-2"> */}
-									<div className="grid grid-cols-3 md:grid-cols-1 w-full">
-										{/* <div className="flex flex-col flex-1 md:flex-0 space-y-1"> */}
-										<div className="col-span-2 space-y-1">
-											<label htmlFor="category">Category</label>
+									<div className="w-full flex gap-3 md:gap-2">
+										<div className="w-[60%] flex flex-col flex-1 md:flex-0 space-y-1">
+											<label
+												htmlFor="category"
+												className="text-sm md:text-base"
+											>
+												Category
+											</label>
 											<select
 												value={values.category}
 												onChange={handleChange}
@@ -268,9 +271,12 @@ const Page = () => {
 												name="category"
 												id="category"
 												required
-												className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-3 text-sm md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
+												className="outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-md text-white px-2 md:px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
 											>
-												<option className="text-white bg-[#150e28]" value="">
+												<option
+													className="text-white bg-[#150e28] text-sm md:text-base"
+													value=""
+												>
 													Select your category
 												</option>
 												<option
@@ -291,9 +297,14 @@ const Page = () => {
 											)}
 										</div>
 
-										{/* <div className="md:hidden flex flex-col flex-0 md:flex-1 space-y-1"> */}
-										<div className="space-y-1">
-											<label htmlFor="groupSize">Group Size</label>
+										<div className="md:hidden flex flex-col flex-0 md:flex-1 space-y-1 w-[30%]">
+											{/* <div className="md:hidden flex flex-col md:flex-1 space-y-1"> */}
+											<label
+												htmlFor="groupSize"
+												className="text-sm md:text-base"
+											>
+												Group Size
+											</label>
 											<select
 												value={values.groupSize}
 												onChange={handleChange}
@@ -302,9 +313,12 @@ const Page = () => {
 												required
 												className={`${
 													errors.groupSize ? "border-red-500" : ""
-												}"outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer`}
+												}"outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white md:px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer`}
 											>
-												<option className="text-white bg-[#150e28]" value="">
+												<option
+													className="text-white bg-[#150e28] text-sm"
+													value=""
+												>
 													Select
 												</option>
 												<option className="text-white bg-[#150e28]" value="1-5">
@@ -334,8 +348,8 @@ const Page = () => {
 											required
 											className={`${
 												errors.groupSize && touched.groupSize
-													? "border-red-500 outline-white h-[2.7rem] rounded-md bg-transparent border-2 text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
-													: "outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
+													? "border-red-500 outline-white h-[2.7rem] rounded-md bg-transparent border-2 text-white px-2 md:px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
+													: "outline-white h-[2.7rem] rounded-md bg-transparent border-2 border-white text-white px-2 md:px-4 md:text-xs xl:text-base focus:outline-fuchsia-900 outline-2 focus:outline focus:border-none cursor-pointer"
 											}`}
 										>
 											<option className="text-white bg-[#150e28]" value="">
