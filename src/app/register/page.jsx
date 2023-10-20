@@ -48,7 +48,20 @@ const Page = () => {
 				setOpenModal(true);
 			},
 		});
-	console.log(errors);
+
+	// useEffect(() => {
+	// 	let timeoutId;
+
+	// 	if (errors) {
+	// 		timeoutId = setTimeout(() => {
+	// 			errors = ''
+	// 		}, 3000);
+	// 	}
+
+	// 	return () => {
+	// 		clearTimeout(timeoutId);
+	// 	};
+	// }, [errors]);
 
 	useEffect(() => {
 		const image = imageRef.current;
@@ -298,7 +311,6 @@ const Page = () => {
 										</div>
 
 										<div className="md:hidden flex flex-col flex-0 md:flex-1 space-y-1 w-[30%]">
-											{/* <div className="md:hidden flex flex-col md:flex-1 space-y-1"> */}
 											<label
 												htmlFor="groupSize"
 												className="text-sm md:text-base"

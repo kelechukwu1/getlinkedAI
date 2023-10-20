@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { RiCloseLine } from "react-icons/ri";
 import Button from "./Button";
