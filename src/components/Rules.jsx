@@ -94,7 +94,7 @@ const Rules = () => {
 				</div>
 
 				<div className="items-center justify-center hidden text-center md:block md:w-full md:text-start">
-					<div className="md:pl-32">
+					<div className="md:pl-32 font">
 						<div data-aos="fade-left" className="text-2xl font-bold">
 							Rules and
 						</div>
@@ -127,7 +127,7 @@ const Rules = () => {
 					/>
 				</div>
 				<div className="items-center justify-center text-center md:hidden md:w-full md:text-start">
-					<div>
+					<div className="font">
 						<div data-aos="fade-left" className="text-2xl font-bold">
 							Rules and
 						</div>

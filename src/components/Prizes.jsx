@@ -52,13 +52,13 @@ const Prizes = () => {
 				<div className="pt-20 pb-20 mx-10 text-white md:pt-0 md:flex md:justify-center md:text-center">
 					<div className="md:hidden">
 						<div className="text-center">
-							<div my-5>
-								<div data-aos="fade-right" className="text-2xl font-bold">
+							<div>
+								<div data-aos="fade-right" className="text-2xl font font-bold">
 									Prizes and
 								</div>
 								<span
 									data-aos="fade-left"
-									className="text-2xl font-bold text-color-2"
+									className="text-2xl font font-bold text-color-2"
 								>
 									Rewards
 								</span>
@@ -93,7 +93,7 @@ const Prizes = () => {
 						<div className="">
 							<div className="hidden pb-10 md:block">
 								<div className="text-start ">
-									<div>
+									<div className="font">
 										<div className="text-2xl font-bold">Prizes and</div>
 										<span className="text-2xl font-bold text-color-2">
 											Rewards

@@ -25,7 +25,7 @@ const Footer = () => {
 				<div className="mx-10 md:mx-40 mt-[10rem] py-10">
 					<div className="grid grid-cols-1 lg:grid-cols-2 md:gap-16 justify-evenly">
 						<div className="">
-							<div className="mb-5">
+							<div className="mb-5 font">
 								<span className="text-2xl font-bold text-white">get</span>
 								<span className="text-2xl font-bold text-color-2">linked</span>
 							</div>

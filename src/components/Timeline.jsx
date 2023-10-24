@@ -20,7 +20,10 @@ const Timeline = () => {
 
 			{/* large sceen design */}
 			<div className="my-20 mx-10 text-white hidden md:block">
-				<div data-aos="fade-down" className="font-bold text-2xl text-center">
+				<div
+					data-aos="fade-down"
+					className="font font-bold text-2xl text-center"
+				>
 					Timeline
 				</div>
 				<div
@@ -232,7 +235,7 @@ const Timeline = () => {
 
 			{/* small screen design*/}
 			<div className="my-20 mx-10 text-white md:hidden">
-				<div className="font-bold text-2xl text-center">Timeline</div>
+				<div className="font font-bold text-2xl text-center">Timeline</div>
 				<div data-aos="fade-up" className="text-center mt-5 md:mx-[20rem]">
 					Here is the breakdown of the time we anticipate using for the upcoming
 					event.

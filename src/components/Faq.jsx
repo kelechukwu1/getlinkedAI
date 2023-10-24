@@ -36,7 +36,7 @@ const Faq = () => {
 			<div className="my-20 text-sm text-white md:justify-center md:items-centermd:my-24">
 				<div className="gap-10 mx-10 md:grid md:grid-cols-2 md:text-start md:justify-center md:items-center md:mx-20">
 					<div>
-						<div className="mb-6 text-center md:text-start">
+						<div className="mb-6 font text-center md:text-start">
 							<div
 								data-aos="fade-left"
 								className="mb-2 text-2xl font-bold text-center md:text-start"

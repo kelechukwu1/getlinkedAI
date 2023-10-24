@@ -152,7 +152,7 @@ const Landing = () => {
 									</div>
 									<div
 										data-aos="fade-up-right"
-										className="md:text-5xl lg:text-6xl font-bold text-color-2"
+										className="md:text-5xl lg:text-6xl font font-bold text-color-2"
 									>
 										1.0
 									</div>
@@ -243,7 +243,7 @@ const Landing = () => {
 					<div>
 						<div
 							data-aos="fade-right"
-							className="flex py-6 text-[1.1rem] text-center justify-center font-bold"
+							className="flex py-6 text-[1.1rem] italic text-center justify-center font-bold"
 						>
 							<Typewriter
 								onInit={(typewriter) => {
@@ -344,15 +344,21 @@ const Landing = () => {
 								</div>
 								<div
 									data-aos="fade-up-right"
-									className="text-4xl font-bold flex justify-center"
+									className="text-4xl font font-bold flex justify-center"
 								>
 									getlinkedTech
 								</div>
 								<div className="flex items-center justify-center">
-									<div data-aos="fade-up-right" className="text-4xl font-bold">
+									<div
+										data-aos="fade-up-right"
+										className="text-4xl font font-bold"
+									>
 										Hackathon
 									</div>
-									<div data-aos="fade-up-right" className="text-4xl font-bold">
+									<div
+										data-aos="fade-up-right"
+										className="text-4xl font font-bold"
+									>
 										1.0
 									</div>
 									<div data-aos="fade-up-left">
@@ -393,7 +399,7 @@ const Landing = () => {
 							</div>
 							<div
 								data-aos="fade-up"
-								className="flex py-[1.6rem] justify-center text-center md:justify-normal gap-4"
+								className="flex py-[1.6rem] time justify-center text-center md:justify-normal gap-4"
 							>
 								<div className="text-6xl">
 									00
