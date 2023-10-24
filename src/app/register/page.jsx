@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useFormik } from "formik";
-import { registerSchema } from "@/schemas/schema";
+import { registerSchema } from "@/schemas/validationSchema";
 
 import graphicsDesginer from "../../../public/svg/3d-graphic-designer.svg";
 import movingLady from "../../../public/moving-lady.png";
@@ -42,8 +42,8 @@ const Page = () => {
 			//form submit
 			onSubmit: (values, actions) => {
 				actions.resetForm();
-				console.log(values);
-				alert(JSON.stringify(values));
+				// console.log(values);
+				// alert(JSON.stringify(values) + `from register form`);
 
 				setOpenModal(true);
 			},

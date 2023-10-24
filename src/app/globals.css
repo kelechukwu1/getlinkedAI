@@ -4,8 +4,20 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700&display=swap");
 
+@font-face {
+	font-family: "clash-display";
+	src: url("../../public/fonts/ClashDisplay-Variable.ttf") format("truetype");
+	font-weight: 800;
+	font-display: swap;
+}
+@font-face {
+	font-family: "unica-one";
+	src: url("../../public/fonts/UnicaOne-Regular.ttf") format("truetype");
+	font-weight: 800;
+	font-display: swap;
+}
 :root {
-	font-family: "Montserrat", sans-serif;
+	font-family: "Montserrat", "clash-display", sans-serif;
 }
 
 body {
@@ -15,6 +27,12 @@ body {
 }
 
 @layer utilities {
+	.font {
+		font-family: "clash-display", sans-serif;
+	}
+	.time {
+		font-family: "unica-one", sans-serif;
+	}
 	.bg-custom-color {
 		background-color: rgba(21, 14, 40, 1);
 	}

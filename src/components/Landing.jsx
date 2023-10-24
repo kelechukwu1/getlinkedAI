@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Typewriter from "typewriter-effect";
+import TypeWriterEffect from "react-typewriter-effect";
 
 const Landing = () => {
 	//aos useEffect hook
@@ -25,9 +27,31 @@ const Landing = () => {
 					<div className="w-full flex flex-col items-end">
 						<div
 							data-aos="fade-down-left"
-							className="py-6 px-7 text-xl font-bold"
+							className="py-6 px-7 text-xl font-bold italic"
 						>
-							Igniting a Revolution in HR Innovation
+							<Typewriter
+								cursorColor="text-color-2"
+								onInit={(typewriter) => {
+									typewriter
+										.typeString("Igniting a Revolution in HR Innovation")
+										// .callFunction(() => {
+										// 	console.log("String typed out!");
+										// })
+										.pauseFor(2000)
+										.deleteAll()
+										// .callFunction(() => {
+										// 	console.log("All strings were deleted");
+										// })
+										.start();
+								}}
+							/>
+							{/* <TypeWriterEffect
+								textStyle={{ fontFamily: "Montserrat" }}
+								startDelay={100}
+								cursorColor="text-color-2"
+								text="Igniting a Revolution in HR Innovation"
+								typeSpeed={100}
+							/> */}
 						</div>
 						<div
 							data-aos="fade-left"
@@ -103,7 +127,7 @@ const Landing = () => {
 					{/* main content */}
 					<div className="md:flex text-white">
 						<div className="md:pl-16 lg:ml-20 md:flex-1">
-							<div className="justify-start mt-5">
+							<div className="justify-start mt-5 font-clash-display">
 								<div data-aos="fade-down" className="absolute">
 									<Image
 										src={"/Creative 1.png"}
@@ -115,20 +139,20 @@ const Landing = () => {
 								</div>
 								<div
 									data-aos="fade-up-right"
-									className="md:text-5xl lg:text-6xl font-bold flex justify-start"
+									className="md:text-5xl lg:text-6xl font-bold font flex justify-start"
 								>
 									getlinkedTech
 								</div>
 								<div className="flex items-center justify-start">
 									<div
 										data-aos="fade-up-right"
-										className="md:text-5xl lg:text-6xl font-bold"
+										className="md:text-5xl lg:text-6xl font-bold font-clash-display"
 									>
 										Hackathon
 									</div>
 									<div
 										data-aos="fade-up-right"
-										className="md:text-5xl lg:text-6xl font-bold"
+										className="md:text-5xl lg:text-6xl font-bold text-color-2"
 									>
 										1.0
 									</div>
@@ -168,7 +192,7 @@ const Landing = () => {
 							</div>
 							<div
 								data-aos="fade-up-left"
-								className="flex py-[1.6rem] justify-center text-center md:justify-normal md:mt-2 gap-4"
+								className="flex py-[1.6rem] time justify-center text-center md:justify-normal md:mt-2 gap-4"
 							>
 								<div className="text-6xl">
 									00
@@ -221,7 +245,21 @@ const Landing = () => {
 							data-aos="fade-right"
 							className="flex py-6 text-[1.1rem] text-center justify-center font-bold"
 						>
-							Igniting a Revolution in HR Innovation
+							<Typewriter
+								onInit={(typewriter) => {
+									typewriter
+										.typeString("Igniting a Revolution in HR Innovation")
+										// .callFunction(() => {
+										// 	console.log("String typed out!");
+										// })
+										.pauseFor(2000)
+										.deleteAll()
+										// .callFunction(() => {
+										// 	console.log("All strings were deleted");
+										// })
+										.start();
+								}}
+							/>
 						</div>
 						<div data-aos="fade-left" className="absolute">
 							<Image

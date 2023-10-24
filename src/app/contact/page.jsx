@@ -3,10 +3,10 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useFormik } from "formik";
-import { contactSchema } from "@/schemas/schema";
+import { contactSchema } from "@/schemas/validationSchema";
 import { useDispatch } from "react-redux";
 import { newUser } from "@/store";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import Socials from "@/components/Socials";
 import BackHome from "@/components/BackHome";
@@ -21,10 +21,6 @@ const Page = () => {
 	const infoRef = useRef(null);
 	const formRef = useRef(null);
 	const dispatch = useDispatch();
-
-	// const handlePost = () => {
-	// 	POST();
-	// };
 
 	//using formik to get form values and yup for validation
 	const {
@@ -47,19 +43,20 @@ const Page = () => {
 		//form submit
 		onSubmit: (values, actions) => {
 			actions.resetForm();
-			// console.log(values);
+			console.log(values);
 			dispatch(newUser(values));
+			alert(JSON.stringify(values) + `from contact form`);
+
 			// handlePost();
 			// setOpenModal(true);
 		},
 	});
-	// try {
-	//   	const user = useSelector((state) => state.user);
-	//   console.log(user);
-
-	// } catch (err) {
-	//   console.log(err.message)
-	// }
+	try {
+		const user = useSelector((state) => state.user);
+		console.log(user);
+	} catch (err) {
+		console.log(err.message);
+	}
 
 	useEffect(() => {
 		const info = infoRef.current;
