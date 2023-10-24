@@ -42,7 +42,7 @@ const NavBar = () => {
 										open ? setOpen(!open) : !open;
 									}}
 								>
-									<div className="relative z-10">
+									<div className="relative z-10 font">
 										<span className="text-3xl font-bold text-white">get</span>
 										<span className="text-3xl font-bold text-color-2">
 											linked
