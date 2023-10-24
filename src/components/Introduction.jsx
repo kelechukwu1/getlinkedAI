@@ -78,12 +78,12 @@ const Introduction = () => {
 					<Image src={"/idea.png"} width={300} height={300} alt="big idea" />
 				</div>
 				<div className="text-center my-5 md:w-full md:text-start">
-					<div data-aos="fade-right" className="text-2xl font-bold mt-5">
+					<div data-aos="fade-right" className="text-2xl font font-bold mt-5">
 						Introduction to getlinked
 					</div>
 					<div
 						data-aos="fade-left"
-						className="text-color-2 text-2xl font-bold mb-5"
+						className="text-color-2 text-2xl font font-bold mb-5"
 					>
 						tech Hackathon1.0
 					</div>

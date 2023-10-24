@@ -36,7 +36,7 @@ const Sponsor = () => {
 			{/* background stars and frames end here*/}
 			<div className="mx-10 my-20 text-white">
 				<div className="text-center lg:px-[24rem] md:px-[10rem]">
-					<div data-aos="fade-down" className="my-5 text-2xl font-bold">
+					<div data-aos="fade-down" className="my-5 text-2xl font font-bold">
 						Partners and Sponsors
 					</div>
 					<div data-aos="fade-up" className="mb-5">

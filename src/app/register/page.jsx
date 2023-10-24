@@ -99,7 +99,7 @@ const Page = () => {
 	return (
 		<>
 			<main className="w-[70%] md:w-[95%] mx-auto">
-				<h2 className="md:hidden text-color-2 font-bold text-xl mt-5">
+				<h2 className="md:hidden text-color-2 font font-bold text-xl mt-5">
 					Register
 				</h2>
 				<section className="md:flex items-center ">
@@ -160,7 +160,7 @@ const Page = () => {
 								className="absolute hidden md:block -bottom-4 right-16"
 								id="img"
 							/>
-							<h2 className="hidded md:block font-bold text-2xl text-color-2 mb-9">
+							<h2 className="hidded md:block font font-bold text-2xl text-color-2 mb-9">
 								Register
 							</h2>
 							<div className="flex items-center">

@@ -106,7 +106,7 @@ const Page = () => {
 						id="img"
 					/>
 					<div className="hidden md:block md:flex-1">
-						<h2 className="text-[32px] font-semibold text-color-2">
+						<h2 className="text-[32px] font font-semibold text-color-2">
 							Get in touch
 						</h2>
 						<div className="text-white space-y-5">
@@ -132,7 +132,7 @@ const Page = () => {
 					ref={formRef}
 				>
 					<BackHome />
-					<div className="text-color-2 text-2xl md:text-lg font-semibold relative">
+					<div className="text-color-2 font text-2xl md:text-lg font-semibold relative">
 						<h2>Questions or need assistance?</h2>
 						<h2>Let us know about it</h2>
 						<Image

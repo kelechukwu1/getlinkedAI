@@ -87,7 +87,7 @@ const Judging = () => {
 					className="items-center justify-center my-5 text-center md:text-start"
 					id="textContainer"
 				>
-					<div data-aos="fade-right" className="text-2xl font-bold">
+					<div data-aos="fade-right" className="text-2xl font font-bold">
 						Judging Criteria{" "}
 						<span data-aos="fade-left" className="text-color-2">
 							Key attributes
