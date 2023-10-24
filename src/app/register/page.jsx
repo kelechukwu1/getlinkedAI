@@ -21,8 +21,6 @@ const Page = () => {
 
 	const formCardRef = useRef();
 	const imageRef = useRef();
-	// const user = useSelector((state) => state.user);
-	// console.log(user);
 
 	//using formik to get form values and yup for validation
 	const { touched, handleBlur, handleChange, handleSubmit, values, errors } =
@@ -34,7 +32,7 @@ const Page = () => {
 				projectTopic: "",
 				category: "",
 				groupSize: 0,
-				privacyPolicy: 0,
+				privacyPolicy: false,
 			},
 			//validations
 			validationSchema: registerSchema,
@@ -42,9 +40,31 @@ const Page = () => {
 			//form submit
 			onSubmit: (values, actions) => {
 				actions.resetForm();
-				// console.log(values);
-				// alert(JSON.stringify(values) + `from register form`);
+				//upload form data to the api
+				const UploadRegisterInfo = async () => {
+					const response = await fetch(
+						"https://backend.getlinked.ai/hackathon/registration",
+						{
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+							},
+							body: JSON.stringify({
+								email: values.email,
+								phone_number: values.phone,
+								team_name: values.teamName,
+								group_size: values.groupSize,
+								project_topic: values.projectTopic,
+								category: values.category,
+								privacy_poclicy_accepted: values.privacyPolicy,
+							}),
+						}
+					);
+					const Dataresponse = await response.json();
+					console.log(Dataresponse);
+				};
 
+				UploadRegisterInfo();
 				setOpenModal(true);
 			},
 		});
@@ -292,17 +312,11 @@ const Page = () => {
 												>
 													Select your category
 												</option>
-												<option
-													className="text-white bg-[#150e28]"
-													value="entertainment"
-												>
-													Business
+												<option className="text-white bg-[#150e28]" value="1">
+													1
 												</option>
-												<option
-													className="text-white bg-[#150e28]"
-													value="technology"
-												>
-													Technology
+												<option className="text-white bg-[#150e28]" value="2">
+													2
 												</option>
 											</select>
 											{errors.category && touched.category && (
@@ -333,14 +347,20 @@ const Page = () => {
 												>
 													Select
 												</option>
-												<option className="text-white bg-[#150e28]" value="1-5">
-													1-5
+												<option className="text-white bg-[#150e28]" value="1">
+													1
 												</option>
-												<option
-													className="text-white bg-[#150e28]"
-													value="6-20"
-												>
-													6-20
+												<option className="text-white bg-[#150e28]" value="2">
+													2
+												</option>
+												<option className="text-white bg-[#150e28]" value="3">
+													3
+												</option>
+												<option className="text-white bg-[#150e28]" value="4">
+													4
+												</option>
+												<option className="text-white bg-[#150e28]" value="5">
+													5
 												</option>
 											</select>
 											{errors.groupSize && touched.groupSize && (
@@ -367,11 +387,20 @@ const Page = () => {
 											<option className="text-white bg-[#150e28]" value="">
 												Select
 											</option>
-											<option className="text-white bg-[#150e28]" value="1-5">
-												1-5
+											<option className="text-white bg-[#150e28]" value="1">
+												1
 											</option>
-											<option className="text-white bg-[#150e28]" value="6-20">
-												6-20
+											<option className="text-white bg-[#150e28]" value="2">
+												2
+											</option>
+											<option className="text-white bg-[#150e28]" value="3">
+												3
+											</option>
+											<option className="text-white bg-[#150e28]" value="4">
+												4
+											</option>
+											<option className="text-white bg-[#150e28]" value="5">
+												5
 											</option>
 										</select>
 										{errors.groupSize && touched.groupSize && (
@@ -387,6 +416,7 @@ const Page = () => {
 								<div className="flex gap-1">
 									<input
 										onChange={handleChange}
+										value={values.privacyPolicy}
 										type="checkbox"
 										name="privacyPolicy"
 										required

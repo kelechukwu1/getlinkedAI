@@ -2,14 +2,12 @@ import * as yup from "yup";
 
 export const registerSchema = yup.object().shape({
 	email: yup.string().email("Please enter a valid email").required(),
-	phone: yup.number().min(5, "Number must be less than 5").required(),
+	phone: yup.string().min(5, "Phone must be less than 5").required(),
 	projectTopic: yup.string().required("Project topic is required"),
 	teamName: yup.string().required("Team name is required"),
-	category: yup.string().required("Category is required"),
-	groupSize: yup.string().required("This is a required field"),
-
-	// privacyPolicy: yup.required("required"),
-	// validDate: yup.date().required("Set a valid dates"),
+	category: yup.number().required("Category is required"),
+	groupSize: yup.number().required("This is a required field"),
+	privacyPolicy: yup.boolean("This is a required field"),
 });
 
 export const contactSchema = yup.object().shape({
