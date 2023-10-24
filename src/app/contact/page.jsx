@@ -4,9 +4,6 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useFormik } from "formik";
 import { contactSchema } from "@/schemas/validationSchema";
-import { useDispatch } from "react-redux";
-import { newUser } from "@/store";
-import { useSelector } from "react-redux";
 
 import Socials from "@/components/Socials";
 import BackHome from "@/components/BackHome";
@@ -15,12 +12,30 @@ import Button from "@/components/Button";
 import star from "../../../public/star.png";
 import stargray from "../../../public/stargray.png";
 import sataGra from "../../../public/sata gra.png";
-// export const user = useSelector((state) => state.user.value);
 
 const Page = () => {
 	const infoRef = useRef(null);
 	const formRef = useRef(null);
-	const dispatch = useDispatch();
+
+	//upload form data to the api
+	const UploadContactInfo = async () => {
+		const response = await fetch(
+			"https://backend.getlinked.ai/hackathon/contact-form",
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					email: values.email,
+					first_name: values.firstName,
+					message: values.message,
+				}),
+			}
+		);
+		const Dataresponse = await response.json();
+		console.log(Dataresponse);
+	};
 
 	//using formik to get form values and yup for validation
 	const {
@@ -43,20 +58,13 @@ const Page = () => {
 		//form submit
 		onSubmit: (values, actions) => {
 			actions.resetForm();
-			console.log(values);
-			dispatch(newUser(values));
-			alert(JSON.stringify(values) + `from contact form`);
 
-			// handlePost();
+			// call the function that makes the api request
+			UploadContactInfo();
+
 			// setOpenModal(true);
 		},
 	});
-	try {
-		const user = useSelector((state) => state.user);
-		console.log(user);
-	} catch (err) {
-		console.log(err.message);
-	}
 
 	useEffect(() => {
 		const info = infoRef.current;
