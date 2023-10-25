@@ -81,7 +81,13 @@ const Judging = () => {
 				{/* background beautification ends here */}
 
 				<div data-aos="fade-left" className="relative z-10 flex justify-center">
-					<Image src={"/judges.png"} width={500} height={500} alt="judges" />
+					<Image
+						src={"/judges.png"}
+						width={500}
+						height={500}
+						alt="judges"
+						className="w-auto h-auto"
+					/>
 				</div>
 				<div
 					className="items-center justify-center my-5 text-center md:text-start"

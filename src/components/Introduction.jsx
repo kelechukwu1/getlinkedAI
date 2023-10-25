@@ -67,15 +67,27 @@ const Introduction = () => {
 				data-aos="fade-right"
 				className="absolute top-[16rem] lg:top-[17rem] left-[10rem] lg:left-[29rem] md:left-[23rem] md:top-[17rem]"
 			>
-				<Image src={"/arrow.png"} width={45} height={45} alt="star image" />
+				<Image
+					src={"/arrow.png"}
+					width={45}
+					height={45}
+					alt="star image"
+					className="w-auto h-auto"
+				/>
 			</div>
 
 			<div className="md:flex mx-10 md:mx-0 my-10 md:w-full md:my-32 items-center justify-center">
 				<div
-					className="flex justify-center md:w-full md:ml-10 invisible"
+					className="flex justify-center md:w-full md:ml-10 invisible w-auto h-auto"
 					ref={ideaRef}
 				>
-					<Image src={"/idea.png"} width={300} height={300} alt="big idea" />
+					<Image
+						src={"/idea.png"}
+						width={300}
+						height={300}
+						alt="big idea"
+						className="w-auto h-auto"
+					/>
 				</div>
 				<div className="text-center my-5 md:w-full md:text-start">
 					<div data-aos="fade-right" className="text-2xl font font-bold mt-5">

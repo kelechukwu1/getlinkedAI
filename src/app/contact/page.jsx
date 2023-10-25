@@ -147,7 +147,7 @@ const Page = () => {
 							src={stargray}
 							alt=""
 							width={15}
-							className="absolute top-9 right-4 md:-top-28 md:-right-9 "
+							className="absolute top-9 right-4 md:-top-28 md:-right-9 w-auto h-auto"
 							id="img"
 						/>
 						<Image
@@ -227,7 +227,7 @@ const Page = () => {
 							src={star}
 							alt=""
 							width={12}
-							className="absolute bottom-[5.5rem] -right-4 md:-bottom-10 md:-right-24 md:w-[15px]"
+							className="absolute bottom-[5.5rem] -right-4 md:-bottom-10 md:-right-24 md:w-[15px] w-auto h-auto"
 							id="img"
 						/>
 					</form>

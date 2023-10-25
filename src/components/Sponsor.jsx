@@ -20,7 +20,7 @@ const Sponsor = () => {
 					width={500}
 					height={500}
 					alt="purple lens"
-					className="blur opacity-60"
+					className="blur opacity-60 w-auto h-auto"
 				/>
 			</div>
 			<div className="absolute top-[20rem] md:top-[28rem] md:left-[45rem] left-[22rem] lg:left-[65rem] z-0">
@@ -29,7 +29,7 @@ const Sponsor = () => {
 					width={500}
 					height={500}
 					alt="purple lens"
-					className="blur opacity-60"
+					className="blur opacity-60 w-auto h-auto"
 				/>
 			</div>
 

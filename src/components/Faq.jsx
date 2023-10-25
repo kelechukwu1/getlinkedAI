@@ -175,7 +175,7 @@ const Faq = () => {
 									height={20}
 									width={20}
 									alt=""
-									className="relative top-[0.5rem] left-[-8rem] md:top-[-1rem] md:left-[1rem] lg:left-[-3rem] lg:top-[1rem]"
+									className="relative top-[0.5rem] left-[-8rem] md:top-[-1rem] md:left-[1rem] lg:left-[-3rem] lg:top-[1rem] w-auto h-auto"
 								/>
 							</div>
 							<div data-aos="fade-down" className="absolute">
@@ -184,7 +184,7 @@ const Faq = () => {
 									height={30}
 									width={30}
 									alt=""
-									className="relative top-[-1rem] md:top-[-3rem] md:left-[6rem] left-[-3rem] lg:top-[-2rem] lg:left-[4rem]"
+									className="relative top-[-1rem] md:top-[-3rem] md:left-[6rem] left-[-3rem] lg:top-[-2rem] lg:left-[4rem] w-auto h-auto"
 								/>
 							</div>
 							<div data-aos="fade-left" className="absolute">
@@ -193,7 +193,7 @@ const Faq = () => {
 									height={20}
 									width={20}
 									alt=""
-									className="relative top-[0.5rem] right-[-2rem] md:top-[-1rem] md:left-[11rem] lg:left-[11rem] lg:top-[1rem]"
+									className="relative top-[0.5rem] right-[-2rem] md:top-[-1rem] md:left-[11rem] lg:left-[11rem] lg:top-[1rem] w-auto h-auto"
 								/>
 							</div>
 						</div>
