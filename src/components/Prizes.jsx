@@ -88,6 +88,7 @@ const Prizes = () => {
 								width={500}
 								height={500}
 								alt="reward cup"
+								className="w-auto h-auto"
 							/>
 						</div>
 						<div className="">
@@ -113,6 +114,7 @@ const Prizes = () => {
 									width={500}
 									height={500}
 									alt="reward medals"
+									className="w-auto h-auto"
 								/>
 							</div>
 						</div>

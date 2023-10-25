@@ -190,7 +190,7 @@ const Page = () => {
 									<Image
 										src={movingLady}
 										alt="moving lady"
-										className="object-contain"
+										className="object-contain w-auto h-auto"
 									/>
 									<Image
 										src={movingMan}

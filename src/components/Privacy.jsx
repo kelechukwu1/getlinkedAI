@@ -105,7 +105,7 @@ const Privacy = () => {
 										<path
 											d="M5 8L7 10.5L13.5 6"
 											stroke="white"
-											stroke-width="2"
+											strokeWidth="2"
 										/>
 									</svg>
 								</div>
@@ -128,7 +128,7 @@ const Privacy = () => {
 										<path
 											d="M5 8L7 10.5L13.5 6"
 											stroke="white"
-											stroke-width="2"
+											strokeWidth="2"
 										/>
 									</svg>
 								</div>
@@ -150,7 +150,7 @@ const Privacy = () => {
 							width={300}
 							height={300}
 							alt="privacy shield"
-							className="lg:h-[25rem]"
+							className="lg:h-[25rem] w-auto h-auto"
 						/>
 					</div>
 					<div
@@ -158,11 +158,12 @@ const Privacy = () => {
 						className="absolute top-0 left-0 flex justify-center w-full h-full"
 					>
 						<Image
+							priority={true}
 							src="/privacy1.png"
 							width={300}
 							height={300}
 							alt="privacy padlock guard"
-							className="absolute md:h-[30rem] md:w-[20rem] top-28 left-0 lg:left-16 lg:top-44"
+							className="absolute md:h-[30rem] md:w-[20rem] top-28 left-0 lg:left-16 lg:top-44 w-auto h-auto"
 						/>
 					</div>
 				</div>

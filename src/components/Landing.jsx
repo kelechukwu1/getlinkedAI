@@ -75,7 +75,7 @@ const Landing = () => {
 								width={500}
 								height={500}
 								alt="purple lens"
-								className="blur opacity-50 z-0"
+								className="blur opacity-50 z-0 w-auto h-auto"
 							/>
 						</div>
 
@@ -134,7 +134,7 @@ const Landing = () => {
 										width={25}
 										height={25}
 										alt="idea"
-										className="relative md:top-[-1.5rem] lg:top-[-1.2rem] md:left-[17rem] lg:left-[21.5rem]"
+										className="relative md:top-[-1.5rem] lg:top-[-1.2rem] md:left-[17rem] lg:left-[21.5rem] w-auto h-auto"
 									/>
 								</div>
 								<div
@@ -162,6 +162,7 @@ const Landing = () => {
 											width={60}
 											height={60}
 											alt="chain"
+											className="w-auto h-auto"
 										/>
 									</div>
 									<div data-aos="fade-left">
@@ -223,13 +224,13 @@ const Landing = () => {
 								data-aos="fade-up"
 								className="lg:mt-[-22.5rem] md:mt-[-20rem]  lg:mr-5  top-[-10rem]"
 							>
-								<div className="md:flex justify-center">
+								<div className="md:flex justify-center w-auto h-auto">
 									<Image
 										src={"/man.png"}
 										width={500}
 										height={500}
 										alt="man in a virtual reality"
-										className="filter grayscale -hue-rotate-180 relative z-0 object-contain"
+										className="filter grayscale -hue-rotate-180 relative z-0 object-contain w-auto h-auto"
 									/>
 								</div>
 							</div>
@@ -281,7 +282,7 @@ const Landing = () => {
 								width={500}
 								height={500}
 								alt="purple lens"
-								className="blur opacity-50 z-0"
+								className="blur opacity-50 z-0 w-auto h-auto"
 							/>
 						</div>
 
@@ -367,6 +368,7 @@ const Landing = () => {
 											width={40}
 											height={40}
 											alt="chain"
+											className="w-auto h-auto"
 										/>
 									</div>
 									<div data-aos="fade-up-left">
@@ -380,12 +382,7 @@ const Landing = () => {
 								</div>
 							</div>
 
-							<div
-								data-aos="fade-up"
-								border-gray-500
-								border-t-1
-								className="text-center px-10 mt-2"
-							>
+							<div data-aos="fade-up" className="text-center px-10 mt-2">
 								Participat in getlinked tech Hackathon 2023 stand a chance to
 								win a Big prize
 							</div>
