@@ -6,8 +6,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Typewriter from "typewriter-effect";
-import TypeWriterEffect from "react-typewriter-effect";
+import { Typewriter } from "nextjs-simple-typewriter";
 
 const Landing = () => {
 	//aos useEffect hook
@@ -30,28 +29,14 @@ const Landing = () => {
 							className="py-6 px-7 text-xl font-bold italic"
 						>
 							<Typewriter
-								cursorColor="text-color-2"
-								onInit={(typewriter) => {
-									typewriter
-										.typeString("Igniting a Revolution in HR Innovation")
-										// .callFunction(() => {
-										// 	console.log("String typed out!");
-										// })
-										.pauseFor(2000)
-										.deleteAll()
-										// .callFunction(() => {
-										// 	console.log("All strings were deleted");
-										// })
-										.start();
-								}}
+								words={["Igniting a Revolution in HR Innovation"]}
+								loop={0}
+								cursor
+								cursorStyle="_"
+								typeSpeed={70}
+								deleteSpeed={50}
+								delaySpeed={2000}
 							/>
-							{/* <TypeWriterEffect
-								textStyle={{ fontFamily: "Montserrat" }}
-								startDelay={100}
-								cursorColor="text-color-2"
-								text="Igniting a Revolution in HR Innovation"
-								typeSpeed={100}
-							/> */}
 						</div>
 						<div
 							data-aos="fade-left"
@@ -146,7 +131,7 @@ const Landing = () => {
 								<div className="flex items-center justify-start">
 									<div
 										data-aos="fade-up-right"
-										className="md:text-5xl lg:text-6xl font-bold font-clash-display"
+										className="md:text-5xl lg:text-6xl font-bold font"
 									>
 										Hackathon
 									</div>
@@ -247,19 +232,13 @@ const Landing = () => {
 							className="flex py-6 text-[1.1rem] italic text-center justify-center font-bold"
 						>
 							<Typewriter
-								onInit={(typewriter) => {
-									typewriter
-										.typeString("Igniting a Revolution in HR Innovation")
-										// .callFunction(() => {
-										// 	console.log("String typed out!");
-										// })
-										.pauseFor(2000)
-										.deleteAll()
-										// .callFunction(() => {
-										// 	console.log("All strings were deleted");
-										// })
-										.start();
-								}}
+								words={["Igniting a Revolution in HR Innovation"]}
+								loop={0}
+								cursor
+								cursorStyle="_"
+								typeSpeed={70}
+								deleteSpeed={50}
+								delaySpeed={1000}
 							/>
 						</div>
 						<div data-aos="fade-left" className="absolute">
@@ -383,7 +362,7 @@ const Landing = () => {
 							</div>
 
 							<div data-aos="fade-up" className="text-center px-10 mt-2">
-								Participat in getlinked tech Hackathon 2023 stand a chance to
+								Participate in getlinked tech Hackathon 2023 stand a chance to
 								win a Big prize
 							</div>
 							<div

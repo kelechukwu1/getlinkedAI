@@ -43,7 +43,7 @@ const Page = () => {
 				//upload form data to the api
 				const UploadRegisterInfo = async () => {
 					const response = await fetch(
-						"https://backend.getlinked.ai/hackathon/registration",
+						process.env.NEXT_PUBLIC_REGISTER_API_URL,
 						{
 							method: "POST",
 							headers: {
@@ -68,20 +68,6 @@ const Page = () => {
 				setOpenModal(true);
 			},
 		});
-
-	// useEffect(() => {
-	// 	let timeoutId;
-
-	// 	if (errors) {
-	// 		timeoutId = setTimeout(() => {
-	// 			errors = ''
-	// 		}, 3000);
-	// 	}
-
-	// 	return () => {
-	// 		clearTimeout(timeoutId);
-	// 	};
-	// }, [errors]);
 
 	useEffect(() => {
 		const image = imageRef.current;

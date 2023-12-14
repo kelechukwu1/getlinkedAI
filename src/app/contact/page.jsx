@@ -19,20 +19,17 @@ const Page = () => {
 
 	//upload form data to the api
 	const UploadContactInfo = async () => {
-		const response = await fetch(
-			"https://backend.getlinked.ai/hackathon/contact-form",
-			{
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					email: values.email,
-					first_name: values.firstName,
-					message: values.message,
-				}),
-			}
-		);
+		const response = await fetch(process.env.NEXT_PUBLIC_CONTACT_API_URL, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				email: values.email,
+				first_name: values.firstName,
+				message: values.message,
+			}),
+		});
 		const Dataresponse = await response.json();
 		console.log(Dataresponse);
 	};
@@ -97,10 +94,6 @@ const Page = () => {
 				});
 		});
 	}, []);
-
-	// const submitHandler = (e) => {
-	// 	e.preventDefault();
-	// };
 
 	return (
 		<main className=" w-[80%] mx-auto md:mt-10">
